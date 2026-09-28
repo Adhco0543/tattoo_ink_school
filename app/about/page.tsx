@@ -27,7 +27,7 @@ export default function AboutPage() {
           <a href="/curriculum">Curriculum</a>
           <a href="/#tuition">Tuition</a>
         </nav>
-        <a className="button button-small" href="/#apply">Apply Now</a>
+        <a className="button button-small" href="/admissions#application">Apply Now</a>
       </header>
 
       <section className="inner-hero founder-hero">
@@ -113,7 +113,7 @@ export default function AboutPage() {
             Ink Tattoo School fits what you are looking for.
           </p>
           <div className="hero-actions">
-            <a className="button button-light" href="/#apply">Request information</a>
+            <a className="button button-light" href="/admissions#application">Request information</a>
             <a className="text-link text-link-light" href="/program">View program <span>↘</span></a>
           </div>
         </div>
