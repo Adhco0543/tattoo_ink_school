@@ -861,3 +861,446 @@ a { color: inherit; text-decoration: none; }
   .milestone-chip { align-items: flex-start; flex-direction: column; gap: 5px; }
   .milestone-row { grid-template-columns: 76px 1fr; }
 }
+
+
+/* Build 4: admissions + application */
+.admissions-hero {
+  position: relative;
+  min-height: 88svh;
+  padding: 170px 0 105px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  isolation: isolate;
+  background: #081512;
+}
+.admissions-art { position: absolute; inset: 0; z-index: -1; }
+.admissions-grid {
+  position: absolute;
+  inset: 0;
+  opacity: .18;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 92%);
+}
+.admissions-sweep {
+  position: absolute;
+  border-radius: 46% 54% 60% 40%;
+  filter: blur(8px);
+}
+.sweep-one {
+  width: 58vw;
+  height: 58vw;
+  right: -20vw;
+  top: -21vw;
+  background: radial-gradient(circle at 45% 45%, rgba(23,107,101,.74), rgba(23,107,101,.12) 52%, transparent 72%);
+}
+.sweep-two {
+  width: 34vw;
+  height: 34vw;
+  left: 12vw;
+  bottom: -19vw;
+  background: radial-gradient(circle, rgba(214,168,75,.24), transparent 68%);
+}
+.admissions-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 90px;
+  align-items: end;
+}
+.admissions-hero h1 {
+  margin: 0;
+  max-width: 1000px;
+  text-transform: uppercase;
+  font-size: clamp(4.2rem, 9vw, 9.5rem);
+  line-height: .86;
+  letter-spacing: -.075em;
+  font-weight: 950;
+}
+.admissions-hero-copy p {
+  margin: 0;
+  color: #b6c8c2;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+.admissions-hero-copy .button { margin-top: 28px; }
+
+.admissions-steps { padding-block: 120px; }
+.admissions-heading {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 60px;
+}
+.admissions-heading h2,
+.admissions-expectations h2,
+.application-intro h2,
+.admissions-disclosure h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: clamp(3.2rem, 5.8vw, 6.2rem);
+  line-height: .92;
+  letter-spacing: -.06em;
+}
+.admissions-step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+}
+.admissions-step-grid article {
+  padding: 34px 28px 35px 0;
+  border-right: 1px solid var(--line);
+}
+.admissions-step-grid article:not(:first-child) { padding-left: 28px; }
+.admissions-step-grid article:last-child { border-right: 0; }
+.admissions-step-grid span {
+  color: #4ea69d;
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+.admissions-step-grid h3 {
+  margin: 46px 0 15px;
+  text-transform: uppercase;
+  font-size: 1.45rem;
+  letter-spacing: -.03em;
+}
+.admissions-step-grid p { margin: 0; color: #9faaa6; line-height: 1.7; font-size: .92rem; }
+
+.admissions-expectations {
+  padding: 110px 0;
+  background: #edf0e9;
+  color: #0b0d0c;
+}
+.admissions-expectations .eyebrow { color: #176b65; }
+.admissions-expectations-grid {
+  display: grid;
+  grid-template-columns: .92fr 1.08fr;
+  gap: 100px;
+  align-items: start;
+}
+.admissions-expectations-grid > div > p:last-child {
+  max-width: 590px;
+  color: #555d59;
+  line-height: 1.8;
+}
+.admissions-expectations ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(0,0,0,.18);
+}
+.admissions-expectations li {
+  position: relative;
+  padding: 23px 0 23px 42px;
+  border-bottom: 1px solid rgba(0,0,0,.18);
+  font-weight: 700;
+  line-height: 1.45;
+}
+.admissions-expectations li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #176b65;
+  font-weight: 950;
+}
+
+.application-section {
+  padding: 125px 0;
+  background:
+    linear-gradient(125deg, rgba(23,107,101,.14), transparent 42%),
+    #090d0c;
+}
+.application-layout {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 80px;
+  align-items: start;
+}
+.application-intro {
+  position: sticky;
+  top: 36px;
+}
+.application-intro > p:not(.eyebrow) {
+  max-width: 520px;
+  color: #aab6b1;
+  line-height: 1.8;
+}
+.application-facts {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+.application-facts > div {
+  padding: 22px 14px 20px 0;
+  border-right: 1px solid var(--line);
+}
+.application-facts > div:not(:first-child) { padding-left: 14px; }
+.application-facts > div:last-child { border-right: 0; }
+.application-facts strong { display: block; font-size: 2rem; letter-spacing: -.05em; }
+.application-facts span {
+  display: block;
+  margin-top: 7px;
+  color: #71817b;
+  text-transform: uppercase;
+  font-size: .6rem;
+  letter-spacing: .12em;
+}
+
+.application-card {
+  padding: 34px;
+  border: 1px solid rgba(255,255,255,.12);
+  background:
+    linear-gradient(145deg, rgba(23,107,101,.07), transparent 42%),
+    #101413;
+}
+.form-progress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 42px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.form-progress button {
+  appearance: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #69736f;
+  text-align: left;
+  padding: 0 8px 15px;
+  font: inherit;
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  cursor: default;
+}
+.form-progress button span {
+  display: block;
+  margin-bottom: 7px;
+  font-size: .58rem;
+}
+.form-progress button.active {
+  color: white;
+  border-color: #39a398;
+}
+.form-progress button.complete { color: #77aaa4; cursor: pointer; }
+
+.application-card fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.application-card legend {
+  padding: 0;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 3.3vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: -.045em;
+}
+.field-intro {
+  margin: 12px 0 30px;
+  color: #84918c;
+  line-height: 1.7;
+}
+.form-grid.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.application-card label {
+  display: block;
+  margin-bottom: 18px;
+  color: #aeb9b5;
+  font-size: .72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.application-card input,
+.application-card textarea,
+.application-card select {
+  width: 100%;
+  margin-top: 9px;
+  padding: 15px 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: #0a0d0c;
+  color: white;
+  border-radius: 0;
+  font: inherit;
+  font-size: .95rem;
+  line-height: 1.4;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.application-card textarea { resize: vertical; }
+.application-card input:focus,
+.application-card textarea:focus,
+.application-card select:focus {
+  border-color: #3b9f96;
+  box-shadow: 0 0 0 3px rgba(59,159,150,.12);
+}
+.file-drop {
+  min-height: 220px;
+  padding: 34px;
+  border: 1px dashed rgba(78,166,157,.5);
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(23,107,101,.055);
+  cursor: pointer;
+}
+.file-drop input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.file-drop-icon {
+  font-size: 2.7rem;
+  line-height: 1;
+  color: #4ea69d;
+}
+.file-drop strong { margin-top: 12px; color: white; font-size: 1rem; }
+.file-drop small {
+  margin-top: 8px;
+  color: #75817d;
+  font-size: .7rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.file-drop em {
+  margin-top: 14px;
+  color: #79b7b0;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.acknowledgment-check {
+  margin-top: 28px;
+  display: grid !important;
+  grid-template-columns: 22px 1fr;
+  gap: 14px;
+  align-items: start;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  line-height: 1.65;
+  font-weight: 500 !important;
+}
+.acknowledgment-check input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: #176b65;
+}
+
+.form-controls {
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-controls button:disabled { opacity: .35; cursor: not-allowed; transform: none; box-shadow: none; }
+.form-back {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #8c9893;
+  font: inherit;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  cursor: pointer;
+}
+.application-complete {
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.application-complete-mark {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  border: 1px solid #4ea69d;
+  color: #66c0b7;
+  font-size: 1.8rem;
+}
+.application-complete h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+  line-height: .95;
+  letter-spacing: -.05em;
+}
+.application-complete > p:not(.eyebrow) {
+  max-width: 600px;
+  color: #96a39e;
+  line-height: 1.8;
+}
+.application-complete .button { margin-top: 20px; }
+
+.admissions-disclosure {
+  padding: 110px 0;
+  background: #113c38;
+}
+.admissions-disclosure-grid {
+  display: grid;
+  grid-template-columns: .45fr 1.55fr;
+  gap: 75px;
+  align-items: center;
+}
+.disclosure-number {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,.25);
+  font-size: clamp(8rem, 19vw, 18rem);
+  font-weight: 950;
+  line-height: .7;
+  letter-spacing: -.12em;
+}
+.admissions-disclosure p:not(.eyebrow) {
+  max-width: 700px;
+  color: #b6cec9;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .admissions-hero-grid,
+  .admissions-heading,
+  .admissions-expectations-grid,
+  .application-layout,
+  .admissions-disclosure-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .admissions-step-grid { grid-template-columns: 1fr 1fr; }
+  .admissions-step-grid article { border-bottom: 1px solid var(--line); }
+  .application-intro { position: static; }
+}
+
+@media (max-width: 560px) {
+  .admissions-hero { min-height: 72svh; padding-top: 130px; }
+  .admissions-hero h1 { font-size: clamp(3.5rem, 16vw, 5.8rem); }
+  .admissions-step-grid { grid-template-columns: 1fr; }
+  .admissions-step-grid article,
+  .admissions-step-grid article:not(:first-child) { padding: 26px 0; border-right: 0; }
+  .form-grid.two-col { grid-template-columns: 1fr; gap: 0; }
+  .application-card { padding: 22px 18px; }
+  .form-progress button { font-size: .55rem; padding-inline: 3px; }
+  .form-progress button span { font-size: .5rem; }
+  .application-facts { grid-template-columns: 1fr; }
+  .application-facts > div,
+  .application-facts > div:not(:first-child) { padding: 14px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+}
