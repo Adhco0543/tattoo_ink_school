@@ -57,7 +57,7 @@ export default function Home() {
           <a href="/curriculum">Curriculum</a>
           <a href="#tuition">Tuition</a>
         </nav>
-        <a className="button button-small" href="#apply">Apply Now</a>
+        <a className="button button-small" href="/admissions#application">Apply Now</a>
       </header>
 
       <section className="hero" id="top">
@@ -79,7 +79,7 @@ export default function Home() {
             equipment knowledge, repetition and disciplined practice.
           </p>
           <div className="hero-actions">
-            <a className="button" href="#apply">Apply Now</a>
+            <a className="button" href="/admissions#application">Apply Now</a>
             <a className="text-link" href="/program">Explore the program <span>↘</span></a>
           </div>
         </div>
@@ -172,8 +172,8 @@ export default function Home() {
           <h2>Your first step isn&apos;t buying a machine.</h2>
           <p>Start with an application, learn about the program and talk with the school about your goals.</p>
           <div className="hero-actions">
-            <a className="button button-light" href="mailto:admissions@inktattooschool.com?subject=Ink%20Tattoo%20School%20Application%20Inquiry">Start an inquiry</a>
-            <a className="text-link text-link-light" href="#contact">Contact the school <span>↘</span></a>
+            <a className="button button-light" href="/admissions#application">Start an inquiry</a>
+            <a className="text-link text-link-light" href="/admissions">Admissions details <span>↘</span></a>
           </div>
         </div>
       </section>
