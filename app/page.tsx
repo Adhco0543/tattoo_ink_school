@@ -58,8 +58,8 @@ export default function Home() {
           <a href="/curriculum">Curriculum</a>
           <a href="/gallery">Gallery</a>
           <a href="/tuition">Tuition</a>
-          <a href="/about">About Allen</a>
-          <a href="/admissions">Admissions</a>
+          <a href="/faq">FAQ</a>
+          <a href="/contact">Contact</a>
         </nav>
         <a className="button button-small" href="/admissions#application">Apply Now</a>
       </header>
@@ -187,6 +187,25 @@ export default function Home() {
           <p className="fine-print">
             Personal tattoo equipment and consumable supplies are purchased separately by the student.
           </p>
+        </div>
+      </section>
+
+      <section className="home-visit">
+        <div className="shell home-visit-grid">
+          <div>
+            <p className="eyebrow">Visit the school</p>
+            <h2>See the environment before you make the decision.</h2>
+          </div>
+          <div>
+            <p>
+              Ask questions, talk through the schedule, and request a visit before applying.
+              The contact experience is built to keep that first conversation simple.
+            </p>
+            <div className="hero-actions">
+              <a className="button" href="/contact">Request a visit</a>
+              <a className="text-link" href="/faq">Read the FAQ <span>↘</span></a>
+            </div>
+          </div>
         </div>
       </section>
 
