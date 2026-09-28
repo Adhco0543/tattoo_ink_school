@@ -145,9 +145,10 @@ export default function CurriculumPage() {
         </a>
         <nav aria-label="Primary navigation">
           <a href="/program">Program</a>
-          <a href="/about">About Allen</a>
           <a href="/curriculum">Curriculum</a>
-          <a href="/#tuition">Tuition</a>
+          <a href="/tuition">Tuition</a>
+          <a href="/about">About Allen</a>
+          <a href="/admissions">Admissions</a>
         </nav>
         <a className="button button-small" href="/admissions#application">Apply Now</a>
       </header>
