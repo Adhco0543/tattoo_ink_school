@@ -567,3 +567,297 @@ a { color: inherit; text-decoration: none; }
   .founder-statement .shell { grid-template-columns: 1fr; }
   .quote-mark { height: 55px; }
 }
+
+
+/* Build 3: interactive 12-week curriculum */
+.curriculum-hero {
+  position: relative;
+  min-height: 80svh;
+  padding: 170px 0 100px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  isolation: isolate;
+  background: #081018;
+}
+.curriculum-hero-art { position: absolute; inset: 0; z-index: -1; }
+.curriculum-stripes {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(49,90,114,.18), transparent 42%),
+    repeating-linear-gradient(90deg, transparent 0 89px, rgba(255,255,255,.035) 90px);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 94%);
+}
+.curriculum-orbit {
+  position: absolute;
+  border: 1px solid rgba(104,167,196,.22);
+  border-radius: 50%;
+}
+.orbit-one { width: 65vw; height: 65vw; right: -22vw; top: -30vw; }
+.orbit-two { width: 32vw; height: 32vw; right: 7vw; top: 9vw; border-color: rgba(216,168,75,.25); }
+.curriculum-hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 90px;
+  align-items: end;
+}
+.curriculum-hero h1 {
+  margin: 0;
+  max-width: 980px;
+  text-transform: uppercase;
+  font-size: clamp(4.4rem, 9vw, 9.5rem);
+  line-height: .86;
+  letter-spacing: -.075em;
+  font-weight: 950;
+}
+.curriculum-lead {
+  margin: 0 0 10px;
+  color: #c0c9cf;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.curriculum-meter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #0d171f;
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.curriculum-meter > div {
+  min-height: 150px;
+  padding: 34px 40px;
+  border-right: 1px solid rgba(255,255,255,.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.curriculum-meter > div:last-child { border-right: 0; }
+.curriculum-meter strong {
+  font-size: clamp(2.6rem, 4vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: -.065em;
+}
+.curriculum-meter span {
+  margin-top: 9px;
+  color: #93a5b0;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: .66rem;
+}
+
+.curriculum-roadmap { padding-block: 120px; }
+.roadmap-heading {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 70px;
+}
+.roadmap-heading h2,
+.milestone-layout h2,
+.finish-grid h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: clamp(3.2rem, 5.8vw, 6.3rem);
+  line-height: .92;
+  letter-spacing: -.06em;
+}
+.roadmap-heading > p {
+  margin: 0;
+  color: #aaa;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.week-accordion { border-top: 1px solid var(--line); }
+.week-panel { border-bottom: 1px solid var(--line); }
+.week-panel summary {
+  min-height: 130px;
+  display: grid;
+  grid-template-columns: 120px 1fr 130px 40px;
+  gap: 26px;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+  transition: background 180ms ease, padding 180ms ease;
+}
+.week-panel summary::-webkit-details-marker { display: none; }
+.week-panel summary:hover { background: rgba(49,90,114,.11); padding-inline: 16px; }
+.week-summary-number {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(244,239,228,.28);
+  font-size: 3.2rem;
+  font-weight: 950;
+  letter-spacing: -.07em;
+}
+.week-summary-copy { display: flex; flex-direction: column; gap: 8px; }
+.week-summary-copy span {
+  color: #7696a8;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .66rem;
+  font-weight: 800;
+}
+.week-summary-copy strong {
+  font-size: clamp(1.5rem, 2.5vw, 2.7rem);
+  text-transform: uppercase;
+  letter-spacing: -.035em;
+}
+.week-summary-hours {
+  color: #9ca9b0;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .67rem;
+  text-align: right;
+}
+.week-summary-toggle {
+  font-size: 2rem;
+  text-align: center;
+  transition: transform 180ms ease, color 180ms ease;
+}
+.week-panel[open] .week-summary-toggle { transform: rotate(45deg); color: #73a8c0; }
+.week-panel[open] summary { border-bottom: 1px solid rgba(255,255,255,.08); }
+
+.week-panel-body {
+  padding: 34px 0 44px 120px;
+}
+.milestone-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  padding: 12px 16px;
+  border: 1px solid rgba(214,168,75,.35);
+  background: rgba(214,168,75,.08);
+}
+.milestone-chip span {
+  color: #b89b62;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .62rem;
+}
+.milestone-chip strong { font-size: .84rem; }
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.day-card {
+  min-height: 100%;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,.1);
+  background:
+    linear-gradient(145deg, rgba(49,90,114,.10), transparent 55%),
+    rgba(255,255,255,.025);
+}
+.day-card-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: #7ea1b4;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .65rem;
+  font-weight: 800;
+}
+.day-card-heading small { color: #717a80; font: inherit; }
+.day-card h3 {
+  margin: 22px 0 18px;
+  min-height: 2.3em;
+  text-transform: uppercase;
+  font-size: 1.22rem;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+}
+.day-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #aeb6ba;
+}
+.day-card li { margin: 8px 0; line-height: 1.45; }
+
+.milestone-section {
+  padding: 115px 0;
+  background:
+    linear-gradient(125deg, #0b1720 0%, #122735 58%, #0e1d27 100%);
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.milestone-layout {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 90px;
+}
+.milestone-list { border-top: 1px solid rgba(255,255,255,.14); }
+.milestone-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 26px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+.milestone-row span {
+  color: #7fa0b2;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .65rem;
+}
+.milestone-row strong { font-size: 1rem; }
+
+.curriculum-finish { padding: 120px 0; }
+.finish-grid {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: 90px;
+  align-items: center;
+}
+.finish-number {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(244,239,228,.2);
+  font-size: clamp(11rem, 24vw, 24rem);
+  font-weight: 950;
+  line-height: .7;
+  letter-spacing: -.12em;
+}
+.finish-grid p:not(.eyebrow) {
+  max-width: 650px;
+  color: #aaa;
+  line-height: 1.8;
+}
+.finish-grid .button { margin-top: 22px; }
+
+@media (max-width: 900px) {
+  .curriculum-hero-grid,
+  .roadmap-heading,
+  .milestone-layout,
+  .finish-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .curriculum-meter { grid-template-columns: 1fr 1fr; }
+  .curriculum-meter > div { min-height: 125px; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .week-panel summary {
+    grid-template-columns: 78px 1fr 36px;
+    gap: 16px;
+  }
+  .week-summary-hours { display: none; }
+  .week-panel-body { padding-left: 0; }
+  .day-grid { grid-template-columns: 1fr; }
+  .day-card h3 { min-height: auto; }
+}
+
+@media (max-width: 560px) {
+  .curriculum-hero { min-height: 70svh; padding-top: 130px; }
+  .curriculum-hero h1 { font-size: clamp(3.5rem, 16vw, 5.8rem); }
+  .curriculum-meter > div { padding: 24px 18px; }
+  .curriculum-meter strong { font-size: 2.6rem; }
+  .week-panel summary { min-height: 104px; grid-template-columns: 58px 1fr 28px; }
+  .week-summary-number { font-size: 2rem; }
+  .week-summary-copy strong { font-size: 1.15rem; }
+  .milestone-chip { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .milestone-row { grid-template-columns: 76px 1fr; }
+}
