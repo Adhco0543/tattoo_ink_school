@@ -3,7 +3,7 @@
 1. **Foundation + Homepage System** — visual language, navigation, hero, key facts, program pillars, curriculum teaser, tuition CTA. **DONE**
 2. **Program + About Allen** — full program page, philosophy, class model, outcomes, Allen/founder presentation. **DONE**
 3. **Interactive Curriculum** — detailed 12-week / 36-day expandable roadmap and milestone reviews. **DONE**
-4. **Admissions + Application** — application form, artwork upload UI, admissions process, confirmations.
+4. **Admissions + Application** — application form, artwork upload UI, admissions process, confirmations. **DONE**
 5. **Tuition + Equipment + Policies** — tuition details, equipment checklist, enrollment/refund/disclosure content.
 6. **Gallery + Media** — responsive gallery, filters, lightbox, hero/video integration, testimonials framework.
 7. **FAQ + Contact + Visit Us** — FAQ, contact form, map/location presentation, tour-request experience.
