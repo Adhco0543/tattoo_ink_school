@@ -34,7 +34,7 @@ export default function ProgramPage() {
         <nav aria-label="Primary navigation">
           <a href="/program">Program</a>
           <a href="/about">About Allen</a>
-          <a href="/#curriculum">Curriculum</a>
+          <a href="/curriculum">Curriculum</a>
           <a href="/#tuition">Tuition</a>
         </nav>
         <a className="button button-small" href="/#apply">Apply Now</a>
@@ -141,7 +141,7 @@ export default function ProgramPage() {
           <p className="eyebrow">Next step</p>
           <h2>See where the 12 weeks can take you.</h2>
           <div className="hero-actions">
-            <a className="button button-light" href="/#curriculum">Explore the curriculum</a>
+            <a className="button button-light" href="/curriculum">Explore the curriculum</a>
             <a className="text-link text-link-light" href="/about">Meet Allen <span>↘</span></a>
           </div>
         </div>
