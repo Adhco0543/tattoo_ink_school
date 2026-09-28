@@ -149,7 +149,7 @@ export default function CurriculumPage() {
           <a href="/curriculum">Curriculum</a>
           <a href="/#tuition">Tuition</a>
         </nav>
-        <a className="button button-small" href="/#apply">Apply Now</a>
+        <a className="button button-small" href="/admissions#application">Apply Now</a>
       </header>
 
       <section className="curriculum-hero">
@@ -257,7 +257,7 @@ export default function CurriculumPage() {
               The final practical project brings together design, stencil work, setup, equipment
               selection, linework, shading or color, cleanup, finished photography and portfolio review.
             </p>
-            <a className="button" href="/#apply">Request program information</a>
+            <a className="button" href="/admissions#application">Request program information</a>
           </div>
         </div>
       </section>
