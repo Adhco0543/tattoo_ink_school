@@ -1304,3 +1304,267 @@ a { color: inherit; text-decoration: none; }
   .application-facts > div,
   .application-facts > div:not(:first-child) { padding: 14px 0; border-right: 0; border-bottom: 1px solid var(--line); }
 }
+
+
+/* Build 5: tuition, equipment, and policies */
+.tuition-hero {
+  position: relative;
+  min-height: 86svh;
+  padding: 170px 0 105px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  isolation: isolate;
+  background: #11100c;
+}
+.tuition-hero-art { position: absolute; inset: 0; z-index: -1; }
+.tuition-lines {
+  position: absolute;
+  inset: 0;
+  opacity: .16;
+  background:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 76px 76px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+.gold-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(214,168,75,.23);
+}
+.gold-orbit-one { width: 70vw; height: 70vw; right: -30vw; top: -32vw; }
+.gold-orbit-two { width: 34vw; height: 34vw; right: 2vw; top: 10vw; border-color: rgba(184,115,51,.3); }
+.tuition-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 90px;
+  align-items: end;
+}
+.tuition-hero h1 {
+  margin: 0;
+  color: var(--gold);
+  font-size: clamp(6rem, 15vw, 14rem);
+  line-height: .75;
+  letter-spacing: -.09em;
+  font-weight: 950;
+}
+.tuition-hero-kicker {
+  margin: 28px 0 0;
+  color: #b6ad98;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: .72rem;
+}
+.tuition-hero-copy h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: clamp(2.7rem, 4.8vw, 5rem);
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+.tuition-hero-copy p { color: #bdb4a4; line-height: 1.8; }
+
+.tuition-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #17150f;
+  border-top: 1px solid rgba(214,168,75,.15);
+  border-bottom: 1px solid rgba(214,168,75,.15);
+}
+.tuition-facts > div {
+  min-height: 145px;
+  padding: 32px 38px;
+  border-right: 1px solid rgba(214,168,75,.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tuition-facts > div:last-child { border-right: 0; }
+.tuition-facts strong { font-size: clamp(2.5rem, 4vw, 4.5rem); letter-spacing: -.06em; }
+.tuition-facts span { margin-top: 7px; color: #a49b89; text-transform: uppercase; letter-spacing: .12em; font-size: .63rem; }
+
+.tuition-breakdown {
+  padding-block: 120px;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 90px;
+}
+.tuition-breakdown h2,
+.equipment-stage h2,
+.checklist-intro h2,
+.refund-note h2,
+.policies-hero h1,
+.policy-list-heading h2,
+.conduct-section h2,
+.completion-heading h2,
+.training-limit h2,
+.refund-policy-section h2,
+.no-guarantee-section h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: clamp(3.2rem, 5.8vw, 6.3rem);
+  line-height: .92;
+  letter-spacing: -.06em;
+}
+.tuition-breakdown > div:last-child p { margin: 0 0 24px; color: #aaa; line-height: 1.85; }
+
+.equipment-stage {
+  padding: 115px 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+.equipment-stage .eyebrow { color: #9a6a16; }
+.equipment-stage-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
+.equipment-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.equipment-columns article { padding: 28px; border: 1px solid rgba(0,0,0,.14); background: rgba(255,255,255,.35); }
+.equipment-phase { color: #9a6a16; text-transform: uppercase; letter-spacing: .12em; font-size: .65rem; font-weight: 900; }
+.equipment-columns ul { margin: 28px 0 0; padding: 0; list-style: none; }
+.equipment-columns li { padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.12); line-height: 1.45; }
+
+.checklist-section { padding-block: 120px; display: grid; grid-template-columns: .7fr 1.3fr; gap: 80px; }
+.checklist-intro p:not(.eyebrow) { color: #aaa; line-height: 1.8; }
+.equipment-checklist { border: 1px solid var(--line); padding: 30px; background: #0e0e0d; }
+.checklist-progress { display: grid; grid-template-columns: 130px 1fr 55px; gap: 22px; align-items: center; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+.checklist-progress strong { display: block; font-size: 1.6rem; }
+.checklist-progress span:not(.progress-track span) { color: #857f75; font-size: .62rem; text-transform: uppercase; letter-spacing: .1em; }
+.progress-track { height: 6px; background: rgba(255,255,255,.08); overflow: hidden; }
+.progress-track span { display: block; height: 100%; background: var(--gold); transition: width 180ms ease; }
+.checklist-progress em { color: var(--gold); font-style: normal; text-align: right; font-weight: 900; }
+.checklist-items { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; padding-top: 12px; }
+.checklist-items label {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+  align-items: center;
+  min-height: 54px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: #c3bdb2;
+  cursor: pointer;
+}
+.checklist-items input { position: absolute; opacity: 0; pointer-events: none; }
+.custom-check { width: 20px; height: 20px; display: grid; place-items: center; border: 1px solid #5f5b53; color: transparent; font-size: .75rem; }
+.checklist-items label.checked { color: #858077; text-decoration: line-through; }
+.checklist-items label.checked .custom-check { border-color: var(--gold); background: var(--gold); color: #100f0b; }
+.checklist-reset { margin-top: 24px; border: 0; background: transparent; color: #8d877d; text-transform: uppercase; letter-spacing: .1em; font-size: .65rem; cursor: pointer; }
+
+.equipment-rules { padding: 105px 0; background: #17150f; }
+.equipment-rules-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(214,168,75,.17); }
+.equipment-rules article { padding: 35px 30px 20px 0; border-right: 1px solid rgba(214,168,75,.17); }
+.equipment-rules article:not(:first-child) { padding-left: 30px; }
+.equipment-rules article:last-child { border-right: 0; }
+.equipment-rules span { color: var(--gold); font-size: .65rem; letter-spacing: .12em; }
+.equipment-rules h3 { margin: 46px 0 16px; text-transform: uppercase; font-size: 1.45rem; }
+.equipment-rules p { color: #a59d8e; line-height: 1.75; font-size: .92rem; }
+
+.refund-note { padding: 115px 0; background: linear-gradient(115deg, #6f4d0f, #2a2110); }
+.refund-note-grid { display: grid; grid-template-columns: .6fr 1.4fr; gap: 80px; align-items: center; }
+.refund-note-number {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,.22);
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 950;
+  letter-spacing: -.09em;
+  transform: rotate(-90deg);
+}
+.refund-note p:not(.eyebrow) { max-width: 720px; color: #ddd3bf; line-height: 1.8; }
+
+.policies-hero {
+  min-height: 78svh;
+  position: relative;
+  padding: 170px 0 100px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  isolation: isolate;
+  background: #15110f;
+}
+.policies-hero-art { position: absolute; inset: 0; z-index: -1; }
+.policy-grid { position: absolute; inset: 0; opacity: .16; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size: 70px 70px; }
+.policy-bar { position: absolute; right: -8vw; width: 55vw; height: 18vw; border: 1px solid rgba(184,115,51,.23); transform: rotate(-18deg); }
+.bar-one { top: 10vw; }
+.bar-two { top: 27vw; right: -20vw; }
+.policies-hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 80px; align-items: end; }
+.policies-hero-grid > p { color: #c0b5ae; line-height: 1.8; }
+
+.policy-list-section { padding-block: 120px; }
+.policy-list-heading { display: grid; grid-template-columns: .75fr 1.25fr; gap: 60px; margin-bottom: 60px; }
+.policy-accordion { border-top: 1px solid var(--line); }
+.policy-accordion details { border-bottom: 1px solid var(--line); }
+.policy-accordion summary { min-height: 105px; display: grid; grid-template-columns: 80px 1fr 30px; gap: 20px; align-items: center; cursor: pointer; list-style: none; }
+.policy-accordion summary::-webkit-details-marker { display: none; }
+.policy-accordion summary span { color: var(--copper); font-size: .65rem; letter-spacing: .13em; }
+.policy-accordion summary strong { text-transform: uppercase; font-size: clamp(1.3rem, 2.2vw, 2.2rem); letter-spacing: -.03em; }
+.policy-accordion summary b { font-size: 1.7rem; font-weight: 400; transition: transform 160ms ease; }
+.policy-accordion details[open] summary b { transform: rotate(45deg); }
+.policy-accordion details > p { margin: 0; padding: 0 30px 32px 80px; max-width: 900px; color: #aaa; line-height: 1.8; }
+
+.conduct-section { padding: 110px 0; background: var(--paper); color: var(--ink); }
+.conduct-section .eyebrow { color: var(--crimson); }
+.conduct-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; }
+.conduct-grid ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(0,0,0,.16); }
+.conduct-grid li { padding: 22px 0 22px 35px; border-bottom: 1px solid rgba(0,0,0,.16); position: relative; font-weight: 700; }
+.conduct-grid li::before { content: "×"; position: absolute; left: 0; color: var(--crimson); font-size: 1.2rem; }
+
+.completion-section { padding-block: 120px; }
+.completion-heading { max-width: 800px; margin-bottom: 65px; }
+.completion-heading > p:last-child { color: #aaa; line-height: 1.8; }
+.completion-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+.completion-grid > div { display: grid; grid-template-columns: 60px 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.completion-grid > div:nth-child(odd) { padding-right: 30px; border-right: 1px solid var(--line); }
+.completion-grid > div:nth-child(even) { padding-left: 30px; }
+.completion-grid span { color: var(--copper); font-size: .63rem; letter-spacing: .12em; }
+.completion-grid p { margin: 0; color: #c2bbb1; }
+
+.training-limit { padding: 110px 0; background: #1b2730; }
+.training-limit-grid { display: grid; grid-template-columns: .55fr 1.45fr; gap: 80px; align-items: center; }
+.training-limit-number { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.18); font-size: clamp(3.7rem, 8vw, 8rem); font-weight: 950; letter-spacing: -.08em; transform: rotate(-90deg); }
+.training-limit p:not(.eyebrow) { color: #b9c2c8; line-height: 1.8; }
+
+.refund-policy-section { padding: 115px 0; background: #17130e; }
+.refund-policy-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; }
+.refund-policy-grid > div:last-child p { color: #aaa396; line-height: 1.85; }
+
+.no-guarantee-section { padding: 110px 0; background: #5e151d; }
+.no-guarantee-grid { display: grid; grid-template-columns: 160px 1fr; gap: 60px; align-items: start; }
+.no-guarantee-mark { width: 120px; height: 120px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; font-size: 4rem; font-weight: 950; }
+.no-guarantee-section p:not(.eyebrow) { max-width: 750px; color: #e0c4c7; line-height: 1.8; }
+
+@media (max-width: 900px) {
+  .tuition-hero-grid,
+  .tuition-breakdown,
+  .equipment-stage-grid,
+  .checklist-section,
+  .refund-note-grid,
+  .policies-hero-grid,
+  .policy-list-heading,
+  .conduct-grid,
+  .training-limit-grid,
+  .refund-policy-grid,
+  .no-guarantee-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .tuition-facts { grid-template-columns: 1fr 1fr; }
+  .equipment-columns { grid-template-columns: 1fr; }
+  .checklist-items { grid-template-columns: 1fr; }
+  .equipment-rules-grid { grid-template-columns: 1fr; }
+  .equipment-rules article,
+  .equipment-rules article:not(:first-child) { padding: 28px 0; border-right: 0; border-bottom: 1px solid rgba(214,168,75,.17); }
+  .refund-note-number,
+  .training-limit-number { transform: none; }
+  .completion-grid { grid-template-columns: 1fr; }
+  .completion-grid > div:nth-child(odd),
+  .completion-grid > div:nth-child(even) { padding: 20px 0; border-right: 0; }
+}
+
+@media (max-width: 560px) {
+  .tuition-hero, .policies-hero { min-height: 68svh; padding-top: 130px; }
+  .tuition-hero h1 { font-size: 5.8rem; }
+  .tuition-facts > div { padding: 24px 18px; min-height: 120px; }
+  .equipment-checklist { padding: 22px 18px; }
+  .checklist-progress { grid-template-columns: 95px 1fr 40px; gap: 12px; }
+  .policy-accordion summary { grid-template-columns: 48px 1fr 24px; }
+  .policy-accordion details > p { padding-left: 48px; padding-right: 0; }
+  .no-guarantee-mark { width: 80px; height: 80px; font-size: 2.4rem; }
+}
