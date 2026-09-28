@@ -1,7 +1,7 @@
 # Ink Tattoo School — 10 Build Sessions
 
 1. **Foundation + Homepage System** — visual language, navigation, hero, key facts, program pillars, curriculum teaser, tuition CTA. **DONE**
-2. **Program + About Allen** — full program page, philosophy, class model, outcomes, Allen/founder presentation.
+2. **Program + About Allen** — full program page, philosophy, class model, outcomes, Allen/founder presentation. **DONE**
 3. **Interactive Curriculum** — detailed 12-week / 36-day expandable roadmap and milestone reviews.
 4. **Admissions + Application** — application form, artwork upload UI, admissions process, confirmations.
 5. **Tuition + Equipment + Policies** — tuition details, equipment checklist, enrollment/refund/disclosure content.
