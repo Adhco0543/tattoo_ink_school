@@ -24,7 +24,7 @@ export default function AboutPage() {
         <nav aria-label="Primary navigation">
           <a href="/program">Program</a>
           <a href="/about">About Allen</a>
-          <a href="/#curriculum">Curriculum</a>
+          <a href="/curriculum">Curriculum</a>
           <a href="/#tuition">Tuition</a>
         </nav>
         <a className="button button-small" href="/#apply">Apply Now</a>
