@@ -52,10 +52,10 @@ export default function Home() {
           <span className="brand-copy">Tattoo School</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#program">Program</a>
+          <a href="/program">Program</a>
+          <a href="/about">About Allen</a>
           <a href="#curriculum">Curriculum</a>
           <a href="#tuition">Tuition</a>
-          <a href="#contact">Contact</a>
         </nav>
         <a className="button button-small" href="#apply">Apply Now</a>
       </header>
@@ -80,7 +80,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button" href="#apply">Apply Now</a>
-            <a className="text-link" href="#program">Explore the program <span>↘</span></a>
+            <a className="text-link" href="/program">Explore the program <span>↘</span></a>
           </div>
         </div>
         <div className="scroll-note">Scroll to explore <span>↓</span></div>
@@ -103,6 +103,7 @@ export default function Home() {
           machine control, linework, shading, color and portfolio development in a focused,
           small-class environment.
         </p>
+        <a className="text-link statement-link" href="/program">See the full program <span>↘</span></a>
       </section>
 
       <section className="pillars shell" aria-label="Core areas of study">
@@ -113,6 +114,21 @@ export default function Home() {
             <p>{pillar.copy}</p>
           </article>
         ))}
+      </section>
+
+      <section className="founder-teaser">
+        <div className="shell founder-teaser-grid">
+          <div className="founder-teaser-mark" aria-hidden="true">AH</div>
+          <div>
+            <p className="eyebrow">Owner & Founder</p>
+            <h2>Meet Allen Hendershot.</h2>
+            <p>
+              The school model is built around structured fundamentals, small-class instruction
+              and deliberate practice from safety and drawing through complete projects.
+            </p>
+            <a className="text-link text-link-light" href="/about">About Allen <span>↘</span></a>
+          </div>
+        </div>
       </section>
 
       <section className="curriculum" id="curriculum">
