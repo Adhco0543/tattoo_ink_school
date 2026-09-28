@@ -36,8 +36,8 @@ export default function ProgramPage() {
           <a href="/curriculum">Curriculum</a>
           <a href="/gallery">Gallery</a>
           <a href="/tuition">Tuition</a>
-          <a href="/about">About Allen</a>
-          <a href="/admissions">Admissions</a>
+          <a href="/faq">FAQ</a>
+          <a href="/contact">Contact</a>
         </nav>
         <a className="button button-small" href="/admissions#application">Apply Now</a>
       </header>
