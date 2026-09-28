@@ -54,7 +54,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="/program">Program</a>
           <a href="/about">About Allen</a>
-          <a href="#curriculum">Curriculum</a>
+          <a href="/curriculum">Curriculum</a>
           <a href="#tuition">Tuition</a>
         </nav>
         <a className="button button-small" href="#apply">Apply Now</a>
@@ -140,7 +140,7 @@ export default function Home() {
               The course moves from sanitation and drawing fundamentals into equipment,
               controlled technique, complete practice projects and professional development.
             </p>
-            <a className="text-link" href="#apply">View admissions <span>↘</span></a>
+            <a className="text-link" href="/curriculum">Explore all 36 class days <span>↘</span></a>
           </div>
           <ol className="week-list">
             {weeks.map((week, index) => (
