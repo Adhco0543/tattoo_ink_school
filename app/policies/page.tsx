@@ -81,6 +81,7 @@ export default function PoliciesPage() {
         <nav aria-label="Primary navigation">
           <a href="/program">Program</a>
           <a href="/curriculum">Curriculum</a>
+          <a href="/gallery">Gallery</a>
           <a href="/tuition">Tuition</a>
           <a href="/about">About Allen</a>
           <a href="/admissions">Admissions</a>
