@@ -1,3 +1,5 @@
+import HeroVideo from "./components/HeroVideo";
+
 const stats = [
   ["12", "Weeks"],
   ["144", "Instructional Hours"],
@@ -54,6 +56,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="/program">Program</a>
           <a href="/curriculum">Curriculum</a>
+          <a href="/gallery">Gallery</a>
           <a href="/tuition">Tuition</a>
           <a href="/about">About Allen</a>
           <a href="/admissions">Admissions</a>
@@ -63,6 +66,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-media" aria-hidden="true">
+          <HeroVideo />
           <div className="ink-orb ink-orb-one" />
           <div className="ink-orb ink-orb-two" />
           <div className="hero-grid" />
@@ -128,6 +132,25 @@ export default function Home() {
               and deliberate practice from safety and drawing through complete projects.
             </p>
             <a className="text-link text-link-light" href="/about">About Allen <span>↘</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section className="home-media-teaser">
+        <div className="shell home-media-teaser-grid">
+          <div>
+            <p className="eyebrow">Gallery & media</p>
+            <h2>Show the work. Show the process.</h2>
+            <p>
+              The media system is ready for real drawings, practice-skin projects, classroom photography,
+              and two school videos without pretending stock imagery is student work.
+            </p>
+            <a className="text-link text-link-light" href="/gallery">Open gallery <span>↘</span></a>
+          </div>
+          <div className="home-media-cards" aria-hidden="true">
+            <div className="home-media-card"><span>Drawing</span></div>
+            <div className="home-media-card"><span>Practice</span></div>
+            <div className="home-media-card"><span>Color</span></div>
           </div>
         </div>
       </section>
