@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import { FormEvent, useState } from "react";
 import { createClient } from "@/lib/supabase/browser";
 
 export default function AdminLoginPage() {
+  const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -27,7 +29,8 @@ export default function AdminLoginPage() {
         return;
       }
 
-      window.location.assign("/admin");
+      router.push("/admin");
+      router.refresh();
     } catch {
       setError("Admin sign-in is not configured yet.");
     } finally {
