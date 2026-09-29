@@ -8,5 +8,5 @@
 6. **Gallery + Media** — responsive gallery, filters, lightbox, hero/video integration, testimonials framework. **DONE**
 7. **FAQ + Contact + Visit Us** — FAQ, contact form, Manchester location presentation, tour-request experience. **DONE**
 8. **Backend + Email + Admin Basics** — submission APIs, private artwork storage, lead records, email notification hooks, Supabase Auth admin dashboard, status review. **CODE COMPLETE — SERVICE CONNECTION PENDING**
-9. **SEO + Analytics + Performance + Accessibility** — metadata, OG images, schema, analytics, speed, accessibility audit.
+9. **SEO + Analytics + Performance + Accessibility** — metadata, OG image, structured data, sitemap/robots, Web Analytics, Speed Insights, structured API logs, accessible mobile navigation, focus/reduced-motion support. **DONE**
 10. **Polish + QA + Vercel Launch** — real media swap, mobile/device review, browser QA, final copy review, deployment/domain launch.
