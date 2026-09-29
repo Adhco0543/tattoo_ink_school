@@ -1,3 +1,4 @@
+import SiteHeader from "@/app/components/SiteHeader";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,22 +16,8 @@ const principles = [
 
 export default function AboutPage() {
   return (
-    <main className="inner-page about-page">
-      <header className="site-header inner-header">
-        <a className="brand" href="/" aria-label="Ink Tattoo School home">
-          <span className="brand-mark">INK</span>
-          <span className="brand-copy">Tattoo School</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="/program">Program</a>
-          <a href="/curriculum">Curriculum</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/tuition">Tuition</a>
-          <a href="/faq">FAQ</a>
-          <a href="/contact">Contact</a>
-        </nav>
-        <a className="button button-small" href="/admissions#application">Apply Now</a>
-      </header>
+    <main id="main-content" className="inner-page about-page">
+      <SiteHeader />
 
       <section className="inner-hero founder-hero">
         <div className="founder-visual" aria-hidden="true">
