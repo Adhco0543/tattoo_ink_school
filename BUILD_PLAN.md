@@ -9,4 +9,4 @@
 7. **FAQ + Contact + Visit Us** — FAQ, contact form, Manchester location presentation, tour-request experience. **DONE**
 8. **Backend + Email + Admin Basics** — submission APIs, private artwork storage, lead records, email notification hooks, Supabase Auth admin dashboard, status review. **CODE COMPLETE — SERVICE CONNECTION PENDING**
 9. **SEO + Analytics + Performance + Accessibility** — metadata, OG image, structured data, sitemap/robots, Web Analytics, Speed Insights, structured API logs, accessible mobile navigation, focus/reduced-motion support. **DONE**
-10. **Polish + QA + Vercel Launch** — real media swap, mobile/device review, browser QA, final copy review, deployment/domain launch.
+10. **Polish + QA + Vercel Launch** — launch copy, mobile navigation, resilient loading/error states, security headers, dependency hardening, CI lint/build verification, deployment readiness. **CODE + QA DONE — LIVE DEPLOYMENT PENDING VERCEL/SUPABASE/EMAIL CONNECTIONS**
