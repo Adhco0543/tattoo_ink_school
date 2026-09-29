@@ -40,8 +40,10 @@ const stepLabels = ["Contact", "Background", "Goals", "Artwork"];
 export default function ApplicationForm() {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<FormDataState>(initialForm);
-  const [artworkCount, setArtworkCount] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
+  const [artwork, setArtwork] = useState<File[]>([]);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [error, setError] = useState("");
+  const [reference, setReference] = useState("");
 
   const update = (field: keyof FormDataState, value: string | boolean) => {
     setForm((current) => ({ ...current, [field]: value }));
@@ -55,27 +57,72 @@ export default function ApplicationForm() {
   };
 
   const handleFiles = (event: ChangeEvent<HTMLInputElement>) => {
-    setArtworkCount(event.target.files?.length ?? 0);
+    const selected = Array.from(event.target.files ?? []);
+
+    if (selected.length > 10) {
+      setError("Please select no more than 10 artwork files.");
+      setArtwork(selected.slice(0, 10));
+      return;
+    }
+
+    setError("");
+    setArtwork(selected);
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!form.acknowledgment) return;
-    setSubmitted(true);
+    if (!form.acknowledgment || status === "submitting") return;
+
+    setStatus("submitting");
+    setError("");
+
+    const data = new FormData();
+    Object.entries(form).forEach(([key, value]) => data.append(key, String(value)));
+    data.append("website", "");
+    artwork.forEach((file) => data.append("artwork", file));
+
+    try {
+      const response = await fetch("/api/applications", {
+        method: "POST",
+        body: data,
+      });
+      const payload = await response.json();
+
+      if (!response.ok) {
+        throw new Error(payload.error || "Application could not be submitted.");
+      }
+
+      setReference(payload.id || "");
+      setStatus("success");
+    } catch (submitError) {
+      setError(submitError instanceof Error ? submitError.message : "Application could not be submitted.");
+      setStatus("error");
+    }
   };
 
-  if (submitted) {
+  if (status === "success") {
     return (
       <div className="application-card application-complete" aria-live="polite">
         <span className="application-complete-mark">✓</span>
-        <p className="eyebrow">Application prepared</p>
-        <h3>Everything is ready for submission.</h3>
+        <p className="eyebrow">Application received</p>
+        <h3>Your application is in.</h3>
         <p>
-          The admissions form experience is complete. Final delivery, file storage, and confirmation
-          email will be connected before launch when the site backend is wired in Build 8.
+          Ink Tattoo School can now review your information and follow up about the next step.
+          Submitting an application does not reserve a class seat or create an enrollment agreement.
         </p>
-        <button className="button" type="button" onClick={() => { setSubmitted(false); setStep(0); }}>
-          Review application
+        {reference && <p className="submission-reference">Reference: {reference}</p>}
+        <button
+          className="button"
+          type="button"
+          onClick={() => {
+            setForm(initialForm);
+            setArtwork([]);
+            setReference("");
+            setStep(0);
+            setStatus("idle");
+          }}
+        >
+          Start another application
         </button>
       </div>
     );
@@ -190,8 +237,8 @@ export default function ApplicationForm() {
             />
             <span className="file-drop-icon">＋</span>
             <strong>Add artwork</strong>
-            <small>JPG, PNG, WEBP or PDF · up to 10 examples recommended</small>
-            {artworkCount > 0 && <em>{artworkCount} file{artworkCount === 1 ? "" : "s"} selected</em>}
+            <small>JPG, PNG, WEBP or PDF · maximum 10 files · 8 MB each</small>
+            {artwork.length > 0 && <em>{artwork.length} file{artwork.length === 1 ? "" : "s"} selected</em>}
           </label>
 
           <label className="acknowledgment-check">
@@ -210,12 +257,14 @@ export default function ApplicationForm() {
         </fieldset>
       )}
 
+      {error && <p className="form-error" role="alert">{error}</p>}
+
       <div className="form-controls">
         <button
           className="form-back"
           type="button"
           onClick={() => setStep((current) => Math.max(0, current - 1))}
-          disabled={step === 0}
+          disabled={step === 0 || status === "submitting"}
         >
           ← Back
         </button>
@@ -225,13 +274,13 @@ export default function ApplicationForm() {
             className="button"
             type="button"
             onClick={() => canContinue() && setStep((current) => Math.min(3, current + 1))}
-            disabled={!canContinue()}
+            disabled={!canContinue() || status === "submitting"}
           >
             Continue
           </button>
         ) : (
-          <button className="button" type="submit" disabled={!canContinue()}>
-            Review application
+          <button className="button" type="submit" disabled={!canContinue() || status === "submitting"}>
+            {status === "submitting" ? "Submitting..." : "Submit application"}
           </button>
         )}
       </div>
