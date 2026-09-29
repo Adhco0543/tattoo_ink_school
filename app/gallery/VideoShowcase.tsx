@@ -32,10 +32,10 @@ function VideoCard({ src, label, title, description, mode }: VideoCardProps) {
         )}
 
         {failed && (
-          <div className="video-fallback" aria-label={`${title} video placeholder`}>
+          <div className="video-fallback" aria-label={`${title} school film`}>
             <div className="video-motion-lines" />
             <span className="video-play-mark">▶</span>
-            <small>Media slot ready</small>
+            <small>School film coming soon</small>
           </div>
         )}
       </div>
@@ -54,15 +54,15 @@ export default function VideoShowcase() {
       <VideoCard
         src="/media/hero-loop.mp4"
         label="Film 01"
-        title="The first impression"
-        description="A short silent loop designed for the homepage: drawing, workstation setup, stencil work, gloves, machines, practice skin, and finished artwork."
+        title="See the craft up close"
+        description="A short visual reel focused on drawing, clean workstation setup, stencil preparation, machine details, practice work, and finished art."
         mode="loop"
       />
       <VideoCard
         src="/media/inside-ink-school.mp4"
         label="Film 02"
         title="Inside Ink Tattoo School"
-        description="A 60–90 second feature video slot for Allen to introduce the program while classroom and training footage carries the story."
+        description="A longer look at the program, training environment, classroom rhythm, and Allen&apos;s approach to fundamentals."
         mode="feature"
       />
     </div>
