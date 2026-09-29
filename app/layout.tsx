@@ -1,16 +1,60 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import StructuredData from "@/app/components/StructuredData";
+import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import "./globals.css";
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  title: "Ink Tattoo School | Professional Tattoo Fundamentals",
-  description:
-    "A 12-week, 144-hour Professional Tattoo Fundamentals program in Manchester, New Hampshire.",
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
+  title: {
+    default: "Ink Tattoo School | Professional Tattoo Fundamentals",
+    template: "%s | Ink Tattoo School",
+  },
+  description: siteDescription,
+  category: "education",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName,
+    title: "Ink Tattoo School | Professional Tattoo Fundamentals",
+    description: siteDescription,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Ink Tattoo School Professional Tattoo Fundamentals",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ink Tattoo School | Professional Tattoo Fundamentals",
+    description: siteDescription,
+    images: ["/opengraph-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#main-content">Skip to main content</a>
+        <StructuredData />
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
