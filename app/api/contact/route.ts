@@ -5,6 +5,16 @@ import { notifySchool } from "@/lib/email";
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
+  const startedAt = Date.now();
+  const requestId = request.headers.get("x-vercel-id") ?? crypto.randomUUID();
+
+  console.log(JSON.stringify({
+    level: "info",
+    message: "contact_submission_started",
+    route: "/api/contact",
+    requestId
+  }));
+
   try {
     const body = await request.json();
 
@@ -57,9 +67,25 @@ export async function POST(request: Request) {
       ],
     });
 
+    console.log(JSON.stringify({
+      level: "info",
+      message: "contact_submission_completed",
+      route: "/api/contact",
+      requestId,
+      duration_ms: Date.now() - startedAt,
+      request_type: requestType
+    }));
+
     return NextResponse.json({ ok: true, id });
   } catch (error) {
-    console.error("Contact route failed", error);
+    console.error(JSON.stringify({
+      level: "error",
+      message: "contact_submission_failed",
+      route: "/api/contact",
+      requestId,
+      duration_ms: Date.now() - startedAt,
+      error: error instanceof Error ? error.message : String(error)
+    }));
     return NextResponse.json({ error: "Contact service is not configured yet." }, { status: 503 });
   }
 }
