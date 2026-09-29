@@ -4,35 +4,43 @@
 
 The 10-build website is feature-complete in the repository, including responsive pages, curriculum, admissions, gallery/media framework, tuition/policies, FAQ/contact, backend routes, admin review tools, SEO, analytics, performance monitoring, accessibility work, and launch hardening.
 
-## External connections still required before a fully functional public launch
+## Backend status
 
-### 1. Dedicated Supabase project
-Build 8 is intentionally not connected to an unrelated existing database.
+### Supabase: connected
+The dedicated project is live and healthy.
 
-Required:
-- Create a dedicated Ink Tattoo School Supabase project.
-- Apply `supabase/schema.sql`.
-- Create approved administrator account(s).
-- Add the administrator UUID(s) to `public.admin_users`.
-- Add the Supabase environment variables documented in `BACKEND_SETUP.md`.
+- Project: `tattoo_ink_school`
+- Project ref: `odavqgcwzdfmzzvujqaw`
+- Region: `us-east-1`
+- Schema migration applied successfully
+- Tables: `applications`, `contact_requests`, `admin_users`
+- Private artwork bucket: `application-artwork`
+- RLS enabled
+- Generated database TypeScript types committed
 
-Until this is done, application, contact, tour-request, artwork-storage, and admin features are code-complete but not live.
+Still required:
+- Create approved administrator account(s) in Supabase Auth.
+- Add administrator UUID(s) to `public.admin_users`.
+- Put the Supabase URL, publishable key, and server-only secret key into Vercel environment variables.
 
-### 2. Email delivery
+### Email delivery: pending
 Required:
 - Connect Resend.
 - Verify the sending domain.
 - Set `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `ADMIN_NOTIFICATION_EMAIL`.
 
-### 3. Vercel project and domain
+### Vercel project and domain: pending
+The connected Vercel team currently has no project for this repository, and the available Vercel connector cannot create/import a project from GitHub.
+
 Required:
-- Connect this GitHub repository to a Vercel project.
+- Import `Adhco0543/tattoo_ink_school` into Vercel.
 - Set production environment variables.
 - Set `NEXT_PUBLIC_SITE_URL` to the final public site URL.
 - Attach the final domain.
 - Enable Web Analytics and Speed Insights in the Vercel project.
 
-### 4. Final business details
+## Final business details
+
 Confirm before publication:
 - Exact public address, if the school wants it displayed.
 - Public phone number and email.
@@ -40,7 +48,8 @@ Confirm before publication:
 - Final written cancellation and refund terms.
 - Any approved payment-plan terms.
 
-### 5. Final media
+## Final media
+
 The site does not fabricate student work or testimonials.
 
 Recommended before the strongest public launch:
