@@ -17,6 +17,16 @@ function readText(data: FormData, key: string) {
 }
 
 export async function POST(request: Request) {
+  const startedAt = Date.now();
+  const requestId = request.headers.get("x-vercel-id") ?? crypto.randomUUID();
+
+  console.log(JSON.stringify({
+    level: "info",
+    message: "application_submission_started",
+    route: "/api/applications",
+    requestId
+  }));
+
   try {
     const data = await request.formData();
 
@@ -128,9 +138,25 @@ export async function POST(request: Request) {
       }),
     ]);
 
+    console.log(JSON.stringify({
+      level: "info",
+      message: "application_submission_completed",
+      route: "/api/applications",
+      requestId,
+      duration_ms: Date.now() - startedAt,
+      artwork_files: artworkPaths.length
+    }));
+
     return NextResponse.json({ ok: true, id: applicationId });
   } catch (error) {
-    console.error("Application route failed", error);
+    console.error(JSON.stringify({
+      level: "error",
+      message: "application_submission_failed",
+      route: "/api/applications",
+      requestId,
+      duration_ms: Date.now() - startedAt,
+      error: error instanceof Error ? error.message : String(error)
+    }));
     return NextResponse.json({ error: "Application service is not configured yet." }, { status: 503 });
   }
 }
