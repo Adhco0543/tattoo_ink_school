@@ -1,3 +1,4 @@
+import Link from "next/link";
 "use client";
 
 import { FormEvent, useState } from "react";
@@ -36,10 +37,10 @@ export default function AdminLoginPage() {
   return (
     <main className="admin-login-page">
       <div className="admin-login-card">
-        <a className="brand" href="/">
+        <Link className="brand" href="/">
           <span className="brand-mark">INK</span>
           <span className="brand-copy">Tattoo School</span>
-        </a>
+        </Link>
         <p className="eyebrow">Private administration</p>
         <h1>Admin sign in</h1>
         <p>Approved school administrators only.</p>
