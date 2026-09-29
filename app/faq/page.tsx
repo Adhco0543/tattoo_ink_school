@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "What do students practice on?",
-    a: "The standard program uses approved non-human training materials for practical exercises. Live-client tattooing is not part of the standard program described in the school package.",
+    a: "The standard program uses approved non-human training materials for practical exercises. Live-client tattooing is not part of the standard Professional Tattoo Fundamentals program.",
   },
   {
     q: "Do I need to own tattoo equipment before the first class?",
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     q: "Do I need previous drawing experience?",
-    a: "The current school materials do not state a minimum prior drawing-experience requirement. Admissions includes a discussion of your background, goals, expectations, and readiness for the program.",
+    a: "There is no published minimum prior drawing-experience requirement. Admissions includes a discussion of your background, goals, expectations, and readiness for the program.",
   },
   {
     q: "Can I show the school my artwork before enrolling?",
@@ -54,11 +54,11 @@ const faqs = [
   },
   {
     q: "What is the refund policy?",
-    a: "The master package says the school will provide its written cancellation and refund policy before enrollment becomes binding. Final refund percentages and deadlines have not yet been supplied for publication, so the website does not invent them.",
+    a: "The school will provide its written cancellation and refund policy before enrollment becomes binding. Final refund percentages and deadlines are governed by that written policy.",
   },
   {
     q: "Are payment plans available?",
-    a: "The current school materials do not publish final payment-plan terms. Any payment options should be confirmed directly with the school before enrollment.",
+    a: "No final payment-plan terms are published on the website. Any payment options should be confirmed directly with the school before enrollment.",
   },
   {
     q: "Can I visit the school before applying?",
