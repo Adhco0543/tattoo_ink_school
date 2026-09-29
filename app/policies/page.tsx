@@ -153,7 +153,7 @@ export default function PoliciesPage() {
             <h2>Standard exercises use approved non-human training materials.</h2>
             <p>
               Live-client tattooing is not part of the standard Professional Tattoo Fundamentals
-              program described in the school package.
+              standard Professional Tattoo Fundamentals program.
             </p>
           </div>
         </div>
