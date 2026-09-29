@@ -6,25 +6,69 @@ type Mode = "question" | "visit";
 
 export default function ContactExperience() {
   const [mode, setMode] = useState<Mode>("question");
-  const [prepared, setPrepared] = useState(false);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [error, setError] = useState("");
+  const [reference, setReference] = useState("");
 
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setPrepared(true);
+    if (status === "submitting") return;
+
+    setStatus("submitting");
+    setError("");
+
+    const data = new FormData(event.currentTarget);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          requestType: mode,
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          replyPreference: data.get("reply"),
+          preferredDay: data.get("preferredDay"),
+          preferredTime: data.get("preferredTime"),
+          message: data.get("message"),
+          website: data.get("website"),
+        }),
+      });
+
+      const payload = await response.json();
+
+      if (!response.ok) {
+        throw new Error(payload.error || "Your request could not be sent.");
+      }
+
+      setReference(payload.id || "");
+      setStatus("success");
+    } catch (submitError) {
+      setError(submitError instanceof Error ? submitError.message : "Your request could not be sent.");
+      setStatus("error");
+    }
   };
 
-  if (prepared) {
+  if (status === "success") {
     return (
       <div className="contact-form-card contact-preview-message" aria-live="polite">
         <span className="contact-preview-mark">✓</span>
-        <p className="eyebrow">Pre-launch preview</p>
-        <h3>Your request is filled out.</h3>
+        <p className="eyebrow">Request received</p>
+        <h3>{mode === "visit" ? "Your visit request is in." : "Your question is in."}</h3>
         <p>
-          This site is still being built, so the form has not sent your information yet.
-          Online delivery and school notifications are connected during the backend build.
+          Ink Tattoo School can now review your request and follow up using the contact information you provided.
         </p>
-        <button className="button" type="button" onClick={() => setPrepared(false)}>
-          Review form
+        {reference && <p className="submission-reference">Reference: {reference}</p>}
+        <button
+          className="button"
+          type="button"
+          onClick={() => {
+            setReference("");
+            setStatus("idle");
+          }}
+        >
+          Send another
         </button>
       </div>
     );
@@ -109,6 +153,11 @@ export default function ContactExperience() {
           <textarea name="message" rows={6} required />
         </label>
 
+        <label className="honeypot-field" aria-hidden="true">
+          Website
+          <input name="website" tabIndex={-1} autoComplete="off" />
+        </label>
+
         <label className="contact-consent">
           <input type="checkbox" required />
           <span>
@@ -116,8 +165,14 @@ export default function ContactExperience() {
           </span>
         </label>
 
-        <button className="button" type="submit">
-          {mode === "visit" ? "Review visit request" : "Review question"}
+        {error && <p className="form-error" role="alert">{error}</p>}
+
+        <button className="button" type="submit" disabled={status === "submitting"}>
+          {status === "submitting"
+            ? "Sending..."
+            : mode === "visit"
+              ? "Send visit request"
+              : "Send question"}
         </button>
       </form>
     </div>
