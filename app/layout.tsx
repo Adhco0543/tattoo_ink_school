@@ -10,10 +10,7 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteName,
-  title: {
-    default: "Ink Tattoo School | Professional Tattoo Fundamentals",
-    template: "%s | Ink Tattoo School",
-  },
+  title: "Ink Tattoo School | Professional Tattoo Fundamentals",
   description: siteDescription,
   category: "education",
   openGraph: {
