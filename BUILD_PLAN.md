@@ -7,6 +7,6 @@
 5. **Tuition + Equipment + Policies** — tuition details, equipment checklist, enrollment/refund/disclosure content. **DONE**
 6. **Gallery + Media** — responsive gallery, filters, lightbox, hero/video integration, testimonials framework. **DONE**
 7. **FAQ + Contact + Visit Us** — FAQ, contact form, Manchester location presentation, tour-request experience. **DONE**
-8. **Backend + Email + Admin Basics** — submission APIs, private artwork storage, lead records, email notification hooks, Supabase Auth admin dashboard, status review. **CODE COMPLETE — SERVICE CONNECTION PENDING**
+8. **Backend + Email + Admin Basics** — submission APIs, private artwork storage, lead records, email notification hooks, Supabase Auth admin dashboard, status review. **SUPABASE DATABASE CONNECTED — AUTH/EMAIL/VERCEL ENV PENDING**
 9. **SEO + Analytics + Performance + Accessibility** — metadata, OG image, structured data, sitemap/robots, Web Analytics, Speed Insights, structured API logs, accessible mobile navigation, focus/reduced-motion support. **DONE**
-10. **Polish + QA + Vercel Launch** — launch copy, mobile navigation, resilient loading/error states, security headers, dependency hardening, CI lint/build verification, deployment readiness. **CODE + QA DONE — LIVE DEPLOYMENT PENDING VERCEL/SUPABASE/EMAIL CONNECTIONS**
+10. **Polish + QA + Vercel Launch** — launch copy, mobile navigation, resilient loading/error states, security headers, dependency hardening, CI lint/build verification, deployment readiness. **CODE + QA DONE — LIVE DEPLOYMENT PENDING VERCEL + EMAIL + ADMIN AUTH**
