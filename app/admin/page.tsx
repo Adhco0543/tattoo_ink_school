@@ -73,7 +73,11 @@ export default async function AdminDashboardPage() {
               <tbody>
                 {(applications ?? []).map((application) => (
                   <tr key={application.id}>
-                    <td><strong>{application.first_name} {application.last_name}</strong></td>
+                    <td>
+                      <a className="admin-record-link" href={`/admin/applications/${application.id}`}>
+                        {application.first_name} {application.last_name}
+                      </a>
+                    </td>
                     <td>{application.email}<br /><small>{application.phone}</small></td>
                     <td>{application.schedule_commitment}</td>
                     <td>{Array.isArray(application.artwork_paths) ? application.artwork_paths.length : 0}</td>
