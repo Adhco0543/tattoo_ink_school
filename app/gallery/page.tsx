@@ -39,8 +39,8 @@ export default function GalleryPage() {
           <h2>From pencil line to finished project.</h2>
         </div>
         <p>
-          Until final school photography is supplied, the tiles below use branded visual placeholders
-          instead of pretending stock images are student work. The filtering and full-screen viewer are live now.
+          The branded visual studies below organize the disciplines taught in the program.
+          Real student or classroom work is only shown when the school has appropriate permission.
         </p>
       </section>
 
@@ -52,34 +52,15 @@ export default function GalleryPage() {
         <div className="shell video-section-heading">
           <div>
             <p className="eyebrow">Film</p>
-            <h2>Two video slots. Two different jobs.</h2>
+            <h2>A closer look at the school.</h2>
           </div>
           <p>
-            The first video is a short silent homepage loop. The second is a longer school story
-            featuring Allen and real classroom footage.
+            Short films can bring the environment to life with real drawing, setup, equipment,
+            practice work, classroom rhythm, and Allen&apos;s approach to fundamentals.
           </p>
         </div>
         <div className="shell">
           <VideoShowcase />
-        </div>
-      </section>
-
-      <section className="media-shot-list">
-        <div className="shell shot-list-grid">
-          <div>
-            <p className="eyebrow">What to film</p>
-            <h2>Capture the details people can almost feel.</h2>
-          </div>
-          <ol>
-            <li><span>01</span><strong>Pencil and marker work on paper</strong></li>
-            <li><span>02</span><strong>Clean workstation setup and barriers</strong></li>
-            <li><span>03</span><strong>Stencil preparation and placement</strong></li>
-            <li><span>04</span><strong>Machine, cartridge, and ink close-ups</strong></li>
-            <li><span>05</span><strong>Practice-skin linework, shading, and color</strong></li>
-            <li><span>06</span><strong>Allen explaining or demonstrating</strong></li>
-            <li><span>07</span><strong>Student artwork with permission</strong></li>
-            <li><span>08</span><strong>Finished portfolio photographs</strong></li>
-          </ol>
         </div>
       </section>
 
