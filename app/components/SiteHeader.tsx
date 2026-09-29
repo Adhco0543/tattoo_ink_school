@@ -1,3 +1,4 @@
+import Link from "next/link";
 const navigation = [
   ["Program", "/program"],
   ["Curriculum", "/curriculum"],
@@ -10,10 +11,10 @@ const navigation = [
 export default function SiteHeader() {
   return (
     <header className="site-header">
-      <a className="brand" href="/" aria-label="Ink Tattoo School home">
+      <Link className="brand" href="/" aria-label="Ink Tattoo School home">
         <span className="brand-mark">INK</span>
         <span className="brand-copy">Tattoo School</span>
-      </a>
+      </Link>
 
       <nav className="desktop-nav" aria-label="Primary navigation">
         {navigation.map(([label, href]) => (
