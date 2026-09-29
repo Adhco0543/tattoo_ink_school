@@ -8,7 +8,17 @@ export const metadata: Metadata = {
     "Explore the full 12-week, 36-class-day Professional Tattoo Fundamentals curriculum at Ink Tattoo School.",
 };
 
-const weeks = [
+type CurriculumDay = [day: string, title: string, topics: string[]];
+
+type CurriculumWeek = {
+  week: string;
+  title: string;
+  hours: string;
+  milestone?: string;
+  days: CurriculumDay[];
+};
+
+const weeks: CurriculumWeek[] = [
   {
     week: "01",
     title: "Introduction, Safety & Sanitation",
@@ -174,8 +184,7 @@ export default function CurriculumPage() {
             <h2>Open a week. See every class day.</h2>
           </div>
           <p>
-            The roadmap below follows the master school package. Open any week to see its three
-            four-hour class sessions and the topics covered in each session.
+            Open any week to see its three four-hour class sessions and the topics covered in each session.
           </p>
         </div>
 
@@ -209,7 +218,7 @@ export default function CurriculumPage() {
                       </div>
                       <h3>{title}</h3>
                       <ul>
-                        {(topics as string[]).map((topic) => <li key={topic}>{topic}</li>)}
+                        {topics.map((topic) => <li key={topic}>{topic}</li>)}
                       </ul>
                     </article>
                   ))}
