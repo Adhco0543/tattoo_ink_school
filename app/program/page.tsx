@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SiteHeader from "@/app/components/SiteHeader";
 import type { Metadata } from "next";
 
@@ -138,10 +139,10 @@ export default function ProgramPage() {
 
       <footer className="footer shell">
         <div>
-          <a className="brand" href="/">
+          <Link className="brand" href="/">
             <span className="brand-mark">INK</span>
             <span className="brand-copy">Tattoo School</span>
-          </a>
+          </Link>
           <p>Professional Tattoo Fundamentals</p>
         </div>
         <div>
