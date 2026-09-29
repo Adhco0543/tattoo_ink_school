@@ -1,3 +1,4 @@
+import SiteHeader from "@/app/components/SiteHeader";
 import type { Metadata } from "next";
 import MediaGallery from "./MediaGallery";
 import VideoShowcase from "./VideoShowcase";
@@ -11,22 +12,8 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="inner-page gallery-page">
-      <header className="site-header inner-header">
-        <a className="brand" href="/" aria-label="Ink Tattoo School home">
-          <span className="brand-mark">INK</span>
-          <span className="brand-copy">Tattoo School</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="/program">Program</a>
-          <a href="/curriculum">Curriculum</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/tuition">Tuition</a>
-          <a href="/faq">FAQ</a>
-          <a href="/contact">Contact</a>
-        </nav>
-        <a className="button button-small" href="/admissions#application">Apply Now</a>
-      </header>
+    <main id="main-content" className="inner-page gallery-page">
+      <SiteHeader />
 
       <section className="gallery-hero">
         <div className="gallery-hero-art" aria-hidden="true">
