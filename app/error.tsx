@@ -1,3 +1,4 @@
+import Link from "next/link";
 "use client";
 
 export default function ErrorPage({
@@ -16,7 +17,7 @@ export default function ErrorPage({
         </p>
         <div className="hero-actions">
           <button className="button" type="button" onClick={reset}>Try again</button>
-          <a className="text-link text-link-light" href="/">Back home <span>↘</span></a>
+          <Link className="text-link text-link-light" href="/">Back home <span>↘</span></Link>
         </div>
       </div>
     </main>
