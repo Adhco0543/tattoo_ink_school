@@ -71,8 +71,8 @@ export default function TuitionPage() {
         </div>
         <div>
           <p>
-            The school package separates tuition from personal equipment so the program can focus
-            on instruction rather than equipment sales.
+            Tuition is kept separate from personal equipment so students can follow school guidance
+            when selecting the equipment they will use for training.
           </p>
           <p>
             Students receive school guidance before purchasing tattoo machines, power systems,
@@ -153,10 +153,9 @@ export default function TuitionPage() {
             <p className="eyebrow">Refund & cancellation</p>
             <h2>Read the final written policy before enrollment.</h2>
             <p>
-              The current master package states that the school will provide its written cancellation
-              and refund policy before the enrollment agreement becomes binding. The package does not
-              set the final refund percentages, deadlines, or cancellation terms, so this website does
-              not invent them.
+              The school will provide its written cancellation and refund policy before the enrollment
+              agreement becomes binding. Final refund percentages, deadlines, and cancellation terms
+              are governed by that written policy.
             </p>
             <a className="text-link text-link-light" href="/policies">
               View student policies <span>↘</span>
