@@ -201,6 +201,22 @@ export default function Home() {
 
       <section className="founder-teaser">
         <div className="shell founder-teaser-grid">
+          <div className="founder-teaser-mark" aria-hidden="true">AH</div>
+          <div>
+            <p className="eyebrow">Owner & Founder</p>
+            <h2>Meet Allen Hendershot.</h2>
+            <p>
+              Allen Hendershot is the owner and founder of Ink Tattoo School. He built the school
+              around structured fundamentals, small-class instruction, clear standards and a
+              professional learning environment where students can develop skill step by step.
+            </p>
+            <a className="text-link text-link-light" href="/about">About Allen <span>↘</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section className="founder-teaser">
+        <div className="shell founder-teaser-grid">
           <div className="founder-teaser-mark" aria-hidden="true">MM</div>
           <div>
             <p className="eyebrow">Lead Instructor</p>
