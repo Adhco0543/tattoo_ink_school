@@ -107,7 +107,7 @@ export default function MediaGallery() {
               <h3>{active.title}</h3>
               <p>{active.caption}</p>
               <small>
-                Visual placeholder. Replace with school-owned or permissioned photography before final launch.
+                Gallery media will feature school-owned, licensed, or permissioned photography.
               </small>
             </div>
           </div>
