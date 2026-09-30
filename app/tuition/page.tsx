@@ -44,14 +44,13 @@ export default function TuitionPage() {
         <div className="shell tuition-hero-grid">
           <div>
             <p className="eyebrow">Tuition & equipment</p>
-            <h1>$8,750</h1>
+            <h1>To Be Announced</h1>
             <p className="tuition-hero-kicker">12 weeks · 144 instructional hours</p>
           </div>
           <div className="tuition-hero-copy">
-            <h2>Know the cost. Know what you bring.</h2>
+            <h2>Know the program. Know the supply policy.</h2>
             <p>
-              Tuition covers the educational program. Personal tattoo equipment and consumable
-              supplies are purchased separately by each student.
+              The final tuition amount has not been set yet and will be published before enrollment becomes binding. All required equipment and supplies used in the program must be purchased through Ink Tattoo School.
             </p>
           </div>
         </div>
@@ -71,12 +70,10 @@ export default function TuitionPage() {
         </div>
         <div>
           <p>
-            Tuition is kept separate from personal equipment so students can follow school guidance
-            when selecting the equipment they will use for training.
+            Tuition and required supply costs will be presented clearly before enrollment becomes binding. Required equipment and supplies are purchased through Ink Tattoo School.
           </p>
           <p>
-            Students receive school guidance before purchasing tattoo machines, power systems,
-            needles, cartridges, inks, practice materials, and other personal consumables.
+            Students receive the required equipment and supply list from the school. Outside supplies or equipment are not permitted unless the school gives written authorization for a specific exception.
           </p>
         </div>
       </section>
@@ -85,7 +82,7 @@ export default function TuitionPage() {
         <div className="shell equipment-stage-grid">
           <div>
             <p className="eyebrow">Equipment timeline</p>
-            <h2>Start simple. Add equipment with guidance.</h2>
+            <h2>Start simple. Purchase required items through the school.</h2>
           </div>
 
           <div className="equipment-columns">
@@ -96,7 +93,7 @@ export default function TuitionPage() {
               </ul>
             </article>
             <article>
-              <span className="equipment-phase">Purchased later in the program</span>
+              <span className="equipment-phase">Purchased through Ink Tattoo School</span>
               <ul>
                 {laterEquipment.map((item) => <li key={item}>{item}</li>)}
               </ul>
@@ -108,10 +105,9 @@ export default function TuitionPage() {
       <section className="shell checklist-section">
         <div className="checklist-intro">
           <p className="eyebrow">Interactive checklist</p>
-          <h2>Track what you already have.</h2>
+          <h2>Review the required school supply list.</h2>
           <p>
-            This checklist is for planning only. Final equipment choices should follow school
-            guidance so items are appropriate and safe for training.
+            This checklist shows the types of items students may need during training. Required items must be purchased through Ink Tattoo School so equipment and supplies meet the school’s training and safety standards.
           </p>
         </div>
         <EquipmentChecklist items={[...beforeClass, ...laterEquipment]} />
@@ -123,24 +119,21 @@ export default function TuitionPage() {
             <span>01</span>
             <h3>School approval</h3>
             <p>
-              The school may refuse equipment or supplies that appear unsafe, damaged,
-              contaminated, expired, counterfeit, incompatible, or inappropriate for training.
+              Only school-supplied or school-authorized equipment and supplies may be used in class. This supports consistency, compatibility, sanitation, and safety.
             </p>
           </article>
           <article>
             <span>02</span>
             <h3>Student ownership</h3>
             <p>
-              Student-purchased equipment remains the student&apos;s property. Students are
-              responsible for maintaining, storing, transporting, and replacing their own equipment.
+              Items purchased by a student through Ink Tattoo School remain the student&apos;s property unless a written purchase or rental agreement states otherwise. Students are responsible for care and storage of their personal equipment.
             </p>
           </article>
           <article>
             <span>03</span>
-            <h3>No required school purchase</h3>
+            <h3>School-only purchases</h3>
             <p>
-              Students are not required to buy personal tattoo equipment from the school unless
-              a future written policy specifically identifies an optional school purchase.
+              All required equipment, supplies, inks, cartridges, practice materials, and consumables must be purchased through Ink Tattoo School. Outside supplies are not permitted unless the school provides written authorization for a specific exception.
             </p>
           </article>
         </div>
