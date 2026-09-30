@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Ink Tattoo School | Allen Hendershot & Megg Murray",
   description:
-    "Meet Ink Tattoo School founder Allen Hendershot and lead instructor Megg Murray, a tattoo artist with more than 25 years of experience.",
+    "Meet Ink Tattoo School founder Allen Hendershot and lead instructor Megg Murray, a tattoo artist with 35 years of experience.",
 };
 
 const principles = [
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <p className="eyebrow">Lead Instructor</p>
             <h2>Megg Murray.</h2>
             <p>
-              Megg has been tattooing for more than 25 years and brings decades of real-world shop
+              Megg has been tattooing for 35 years and brings decades of real-world shop
               experience into the classroom. Her instruction centers on disciplined fundamentals,
               professional habits and hands-on learning.
             </p>

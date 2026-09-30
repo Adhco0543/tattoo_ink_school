@@ -22,7 +22,7 @@ const policies = [
   {
     title: "Equipment",
     copy:
-      "Students are responsible for approved personal equipment and consumables. Unsafe or questionable equipment may not be used in class.",
+      "All required equipment, supplies, inks, cartridges, practice materials, and consumables used in the program must be purchased through Ink Tattoo School. Outside supplies or equipment are not permitted in class unless the school gives written authorization for a specific exception.",
   },
   {
     title: "Homework & practice",
@@ -153,8 +153,7 @@ export default function PoliciesPage() {
             <p className="eyebrow">Practical training limitation</p>
             <h2>Standard exercises use approved non-human training materials.</h2>
             <p>
-              Live-client tattooing is not part of the standard Professional Tattoo Fundamentals
-              standard Professional Tattoo Fundamentals program.
+              Live-client tattooing is not part of the standard Professional Tattoo Fundamentals program.
             </p>
           </div>
         </div>

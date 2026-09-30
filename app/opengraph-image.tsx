@@ -20,7 +20,7 @@ export default function OpenGraphImage() {
             <div style={{fontSize:"78px",lineHeight:.92,fontWeight:900,letterSpacing:"-5px",textTransform:"uppercase",marginTop:"20px"}}>Professional Tattoo Fundamentals</div>
           </div>
           <div style={{display:"flex",gap:"56px",fontSize:"24px",textTransform:"uppercase",letterSpacing:"3px",color:"#d8d0c2"}}>
-            <span>12 Weeks</span><span>144 Hours</span><span>$8,750 Tuition</span>
+            <span>12 Weeks</span><span>144 Hours</span><span>Tuition TBD</span>
           </div>
         </div>
       </div>

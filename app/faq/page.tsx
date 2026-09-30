@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "How much is tuition?",
-    a: "Program tuition is $8,750. Personal tattoo equipment and consumable supplies are purchased separately by the student.",
+    a: "The final tuition amount has not been set yet. Ink Tattoo School will publish the final tuition before enrollment becomes binding. All required equipment and supplies must be purchased through the school; outside supplies are not permitted.",
   },
   {
     q: "How large are the classes?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "Do I need to own tattoo equipment before the first class?",
-    a: "No. Students begin with basic art supplies. Tattoo machines, cartridges, inks, practice skins, and other personal tattoo supplies are purchased later with school guidance.",
+    a: "No. The school will provide the required supply and equipment list. All required art supplies, tattoo equipment, consumables, inks, cartridges, practice materials, and other class supplies must be purchased through Ink Tattoo School. Outside supplies are not permitted.",
   },
   {
     q: "Do I need previous drawing experience?",
