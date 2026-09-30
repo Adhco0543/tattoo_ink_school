@@ -5,7 +5,7 @@ const stats = [
   ["12", "Weeks"],
   ["144", "Instructional Hours"],
   ["3", "Days / Week"],
-  ["$8,750", "Program Tuition"],
+  ["TBD", "Program Tuition"],
 ];
 
 const pillars = [
@@ -47,7 +47,7 @@ const weeks = [
 ];
 
 const reasons = [
-  ["25+ Years", "Learn from Megg Murray’s decades of real tattoo-shop experience."],
+  ["35 Years", "Learn from Megg Murray’s decades of real tattoo-shop experience."],
   ["Small Classes", "More room for questions, observation, repetition and direct feedback."],
   ["Real Shop", "Training is built around professional habits, equipment knowledge and shop expectations."],
   ["Art + Safety", "Technique matters, but so do drawing, sanitation, setup and disciplined process."],
@@ -93,7 +93,7 @@ export default function Home() {
           </h1>
           <p className="hero-copy">
             A structured Professional Tattoo Fundamentals program led by Megg Murray, a tattoo artist
-            with more than 25 years of experience, and built around art, safety, equipment knowledge,
+            with 35 years of experience, and built around art, safety, equipment knowledge,
             repetition and disciplined practice.
           </p>
           <div className="hero-actions">
@@ -206,7 +206,7 @@ export default function Home() {
             <p className="eyebrow">Lead Instructor</p>
             <h2>Meet Megg Murray.</h2>
             <p>
-              Megg has more than 25 years of tattooing experience and brings real shop knowledge,
+              Megg has 35 years of tattooing experience and brings real shop knowledge,
               professional standards and hands-on perspective into the classroom. Her verified
               certifications and training can be listed here as soon as the exact credential names are provided.
             </p>
@@ -259,12 +259,12 @@ export default function Home() {
       <section className="tuition shell" id="tuition">
         <div>
           <p className="eyebrow">Program tuition</p>
-          <h2>$8,750</h2>
+          <h2>To Be Announced</h2>
         </div>
         <div className="tuition-copy">
           <p>12 weeks. 144 instructional hours. Small-class instruction.</p>
           <p className="fine-print">
-            Personal tattoo equipment and consumable supplies are purchased separately by the student.
+            All required equipment and supplies used in the program must be purchased through Ink Tattoo School. Outside supplies are not permitted.
           </p>
         </div>
       </section>
