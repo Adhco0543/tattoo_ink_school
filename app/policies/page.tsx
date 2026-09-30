@@ -153,8 +153,7 @@ export default function PoliciesPage() {
             <p className="eyebrow">Practical training limitation</p>
             <h2>Standard exercises use approved non-human training materials.</h2>
             <p>
-              Live-client tattooing is not part of the standard Professional Tattoo Fundamentals
-              standard Professional Tattoo Fundamentals program.
+              Live-client tattooing is not part of the standard Professional Tattoo Fundamentals program.
             </p>
           </div>
         </div>
