@@ -3,9 +3,9 @@ import SiteHeader from "@/app/components/SiteHeader";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Allen Hendershot | Ink Tattoo School",
+  title: "About Ink Tattoo School | Allen Hendershot & Megg Murray",
   description:
-    "Meet Allen Hendershot, owner and founder of Ink Tattoo School in Manchester, New Hampshire.",
+    "Meet Ink Tattoo School founder Allen Hendershot and lead instructor Megg Murray, a tattoo artist with more than 25 years of experience.",
 };
 
 const principles = [
@@ -59,10 +59,29 @@ export default function AboutPage() {
             machines, needles, stencils, linework, shading, black-and-gray, color and complete projects.
           </p>
           <p>
-            Allen is presented here as the owner and founder of Ink Tattoo School. This site does not
-            add unverified claims about credentials, licensing history or years of tattoo experience.
-            Those details can be added later when the school provides them for publication.
+            Allen is the owner and founder of Ink Tattoo School. Instructor experience and credentials
+            are presented separately so students can clearly see who operates the school and who leads
+            the tattoo instruction.
           </p>
+        </div>
+      </section>
+
+      <section className="founder-teaser">
+        <div className="shell founder-teaser-grid">
+          <div className="founder-teaser-mark" aria-hidden="true">MM</div>
+          <div>
+            <p className="eyebrow">Lead Instructor</p>
+            <h2>Megg Murray.</h2>
+            <p>
+              Megg has been tattooing for more than 25 years and brings decades of real-world shop
+              experience into the classroom. Her instruction centers on disciplined fundamentals,
+              professional habits and hands-on learning.
+            </p>
+            <p className="fine-print">
+              Megg&apos;s individual certificates and professional training will be listed by name once
+              the exact credentials are provided for publication.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -122,6 +141,7 @@ export default function AboutPage() {
           <p className="fine-print">
             Completion of the program does not itself constitute a tattoo apprenticeship or state tattoo license.
           </p>
+          <p className="fine-print">Website built by Teejay · AI development support by Bella</p>
         </div>
       </footer>
     </main>
