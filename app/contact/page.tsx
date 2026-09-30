@@ -46,8 +46,8 @@ export default function ContactPage() {
             <p className="eyebrow">Location</p>
             <h2>Manchester, New Hampshire</h2>
             <p>
-              The exact street address, public phone number, school email, and visiting hours
-              still need to be confirmed before launch. The website will not publish guessed contact information.
+              Ink Tattoo School is based in Manchester, New Hampshire. Prospective students can
+              request a visit below, and confirmed visit details can be provided directly by the school.
             </p>
             <div className="location-facts">
               <div><span>Program</span><strong>12 weeks</strong></div>
