@@ -129,8 +129,8 @@ export default function Home() {
             <p className="eyebrow">Gallery & media</p>
             <h2>Show the work. Show the process.</h2>
             <p>
-              The media system is ready for real drawings, practice-skin projects, classroom photography,
-              and two school videos without pretending stock imagery is student work.
+              Explore drawing, practice-skin projects, classroom detail, and the visual progression
+              from first sketch to finished portfolio.
             </p>
             <a className="text-link text-link-light" href="/gallery">Open gallery <span>↘</span></a>
           </div>
