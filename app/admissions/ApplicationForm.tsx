@@ -227,7 +227,7 @@ export default function ApplicationForm() {
       {step === 3 && (
         <fieldset>
           <legend>Artwork & acknowledgment</legend>
-          <p className="field-intro">Artwork is optional. The school package suggests 5–10 examples if available.</p>
+          <p className="field-intro">Artwork is optional. If available, you may share 5–10 examples.</p>
           <label className="file-drop">
             <input
               type="file"
