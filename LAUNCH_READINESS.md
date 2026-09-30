@@ -29,11 +29,11 @@ Required:
 - Verify the sending domain.
 - Set `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `ADMIN_NOTIFICATION_EMAIL`.
 
-### Vercel project and domain: pending
-The connected Vercel team currently has no project for this repository, and the available Vercel connector cannot create/import a project from GitHub.
+### Vercel project and domain: project created, first deployment pending
+Vercel project: `tattoo-ink-school-f4px` (`prj_QAWckjVh2waVFP1RVVLdeak9Nule`).
 
 Required:
-- Import `Adhco0543/tattoo_ink_school` into Vercel.
+- Complete the first deployment from the connected GitHub repository.
 - Set production environment variables.
 - Set `NEXT_PUBLIC_SITE_URL` to the final public site URL.
 - Attach the final domain.
