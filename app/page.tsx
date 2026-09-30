@@ -67,8 +67,9 @@ export default function Home() {
             Develop your art.
           </h1>
           <p className="hero-copy">
-            A structured Professional Tattoo Fundamentals program built around art, safety,
-            equipment knowledge, repetition and disciplined practice.
+            A structured Professional Tattoo Fundamentals program led by Megg Murray, a tattoo artist
+            with more than 25 years of experience, and built around art, safety, equipment knowledge,
+            repetition and disciplined practice.
           </p>
           <div className="hero-actions">
             <a className="button" href="/admissions#application">Apply Now</a>
@@ -110,15 +111,16 @@ export default function Home() {
 
       <section className="founder-teaser">
         <div className="shell founder-teaser-grid">
-          <div className="founder-teaser-mark" aria-hidden="true">AH</div>
+          <div className="founder-teaser-mark" aria-hidden="true">MM</div>
           <div>
-            <p className="eyebrow">Owner & Founder</p>
-            <h2>Meet Allen Hendershot.</h2>
+            <p className="eyebrow">Lead Instructor</p>
+            <h2>Meet Megg Murray.</h2>
             <p>
-              The school model is built around structured fundamentals, small-class instruction
-              and deliberate practice from safety and drawing through complete projects.
+              Megg has more than 25 years of tattooing experience and brings real shop knowledge,
+              professional standards and hands-on perspective into the classroom. Her verified
+              certifications and training can be listed here as soon as the exact credential names are provided.
             </p>
-            <a className="text-link text-link-light" href="/about">About Allen <span>↘</span></a>
+            <a className="text-link text-link-light" href="/about">Meet the school <span>↘</span></a>
           </div>
         </div>
       </section>
@@ -126,18 +128,18 @@ export default function Home() {
       <section className="home-media-teaser">
         <div className="shell home-media-teaser-grid">
           <div>
-            <p className="eyebrow">Gallery & media</p>
+            <p className="eyebrow">Inside the shop</p>
             <h2>Show the work. Show the process.</h2>
             <p>
-              Explore drawing, practice-skin projects, classroom detail, and the visual progression
-              from first sketch to finished portfolio.
+              This section is ready for real shop photography: Megg tattooing, the studio interior,
+              clean station details, supervised practice, drawing and finished portfolio work.
             </p>
             <a className="text-link text-link-light" href="/gallery">Open gallery <span>↘</span></a>
           </div>
           <div className="home-media-cards" aria-hidden="true">
-            <div className="home-media-card"><span>Drawing</span></div>
+            <div className="home-media-card"><span>Tattooing</span></div>
+            <div className="home-media-card"><span>The Shop</span></div>
             <div className="home-media-card"><span>Practice</span></div>
-            <div className="home-media-card"><span>Color</span></div>
           </div>
         </div>
       </section>
@@ -218,6 +220,9 @@ export default function Home() {
           <p className="fine-print">
             Educational fundamentals program. Completion does not itself constitute a tattoo apprenticeship,
             state tattoo license, guarantee of employment, or independent authorization to tattoo the public.
+          </p>
+          <p className="fine-print">
+            Website built by Teejay · AI development support by Bella
           </p>
         </div>
       </footer>
