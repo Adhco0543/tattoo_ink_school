@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 };
 
 const beforeClass = [
-  "Notebook or binder",
-  "Pencils and erasers",
-  "Black drawing pens or markers",
-  "Basic drawing paper or sketchbook",
-  "Any additional basic art supplies listed by the instructor",
+  "Notebook or binder purchased through Ink Tattoo School",
+  "Pencils and erasers purchased through Ink Tattoo School",
+  "Black drawing pens or markers purchased through Ink Tattoo School",
+  "Basic drawing paper or sketchbook purchased through Ink Tattoo School",
+  "Any additional required art supplies listed by the instructor and purchased through Ink Tattoo School",
 ];
 
 const laterEquipment = [
@@ -87,7 +87,7 @@ export default function TuitionPage() {
 
           <div className="equipment-columns">
             <article>
-              <span className="equipment-phase">Before class begins</span>
+              <span className="equipment-phase">Required before class begins · purchased through the school</span>
               <ul>
                 {beforeClass.map((item) => <li key={item}>{item}</li>)}
               </ul>
