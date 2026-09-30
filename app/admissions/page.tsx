@@ -22,6 +22,7 @@ const expectations = [
   "Discussion of goals and expectations",
   "Optional 5–10 artwork examples if available",
   "Acknowledgment that the program is educational and is not itself a tattoo license or apprenticeship",
+  "Acknowledgment that all required equipment and supplies must be purchased through Ink Tattoo School",
 ];
 
 export default function AdmissionsPage() {
@@ -95,7 +96,7 @@ export default function AdmissionsPage() {
             <div className="application-facts">
               <div><strong>12</strong><span>Weeks</span></div>
               <div><strong>144</strong><span>Hours</span></div>
-              <div><strong>$8,750</strong><span>Tuition</span></div>
+              <div><strong>TBD</strong><span>Tuition</span></div>
             </div>
           </div>
           <ApplicationForm />
@@ -126,7 +127,7 @@ export default function AdmissionsPage() {
         </div>
         <div>
           <p>Manchester, New Hampshire</p>
-          <p className="fine-print">12 weeks · 144 instructional hours · $8,750 tuition</p>
+          <p className="fine-print">12 weeks · 144 instructional hours · tuition to be announced</p>
         </div>
       </footer>
     </main>
