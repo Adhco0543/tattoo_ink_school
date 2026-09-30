@@ -25,14 +25,7 @@ export default function StructuredData() {
         description:
           "A 12-week, 144-hour fundamentals program covering safety, drawing, tattoo design, equipment, linework, shading, black and gray, color, practice projects, portfolio development, and professional fundamentals.",
         provider: { "@id": `${url}/#school` },
-        timeRequired: "P12W",
-        offers: {
-          "@type": "Offer",
-          price: "8750",
-          priceCurrency: "USD",
-          category: "Tuition",
-          url: `${url}/tuition`
-        }
+        timeRequired: "P12W"
       }
     ]
   };
