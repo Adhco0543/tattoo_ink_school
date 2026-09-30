@@ -24,19 +24,24 @@ Still required:
 - Put the Supabase URL, publishable key, and server-only secret key into Vercel environment variables.
 
 ### Email delivery: pending
+The connected Resend account is reachable, but it currently has no verified sending domains.
+
 Required:
-- Connect Resend.
-- Verify the sending domain.
+- Add and verify the sending domain in Resend.
+- Create a sending API key after the domain is ready.
 - Set `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `ADMIN_NOTIFICATION_EMAIL`.
 
-### Vercel project and domain: project created, first deployment pending
+### Vercel project and domain: production deployment live
 Vercel project: `tattoo-ink-school-f4px` (`prj_QAWckjVh2waVFP1RVVLdeak9Nule`).
 
+Production URL: `https://tattoo-ink-school-f4px.vercel.app`
+
+The first Git-backed production deployment is READY and the public pages return HTTP 200. The `/admin` route currently reports that Supabase server environment variables are not configured, which is expected until the production variables are added.
+
 Required:
-- Complete the first deployment from the connected GitHub repository.
 - Set production environment variables.
-- Set `NEXT_PUBLIC_SITE_URL` to the final public site URL.
-- Attach the final domain.
+- Set `NEXT_PUBLIC_SITE_URL=https://tattoo-ink-school-f4px.vercel.app` unless a custom domain replaces it.
+- Attach the final custom domain if desired.
 - Enable Web Analytics and Speed Insights in the Vercel project.
 
 ## Final business details
