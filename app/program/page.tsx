@@ -148,7 +148,7 @@ export default function ProgramPage() {
         <div>
           <p>Manchester, New Hampshire</p>
           <p className="fine-print">
-            12-week educational program · 144 instructional hours · tuition $8,750
+            12-week educational program · 144 instructional hours · tuition to be announced
           </p>
         </div>
       </footer>
