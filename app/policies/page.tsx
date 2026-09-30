@@ -89,7 +89,7 @@ export default function PoliciesPage() {
             <h1>Clear rules make better training.</h1>
           </div>
           <p>
-            The school package sets expectations around attendance, conduct, sanitation,
+            School policies set expectations around attendance, conduct, sanitation,
             equipment, testing, complaints, privacy, and completion.
           </p>
         </div>
@@ -132,8 +132,8 @@ export default function PoliciesPage() {
           <p className="eyebrow">Completion checklist</p>
           <h2>A certificate is earned, not automatic.</h2>
           <p>
-            Tuition payment by itself does not guarantee a Certificate of Completion. The package
-            requires the following completion standards.
+            Tuition payment by itself does not guarantee a Certificate of Completion. Students
+            must satisfy the following completion standards.
           </p>
         </div>
         <div className="completion-grid">
@@ -168,13 +168,12 @@ export default function PoliciesPage() {
           </div>
           <div>
             <p>
-              The master package says the student will receive the school&apos;s written cancellation
-              and refund policy before the enrollment agreement becomes binding.
+              Students will receive the school&apos;s written cancellation and refund policy before
+              the enrollment agreement becomes binding.
             </p>
             <p>
-              The supplied package does not specify the final refund percentages, cancellation
-              deadlines, or payment-plan terms. Those terms should be added only after the school
-              adopts the final written policy.
+              Final refund percentages, cancellation deadlines, and payment-plan terms are governed
+              by the school&apos;s written enrollment and refund policies.
             </p>
           </div>
         </div>
