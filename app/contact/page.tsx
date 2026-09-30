@@ -52,7 +52,7 @@ export default function ContactPage() {
             <div className="location-facts">
               <div><span>Program</span><strong>12 weeks</strong></div>
               <div><span>Instruction</span><strong>144 hours</strong></div>
-              <div><span>Tuition</span><strong>$8,750</strong></div>
+              <div><span>Tuition</span><strong>To be announced</strong></div>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
           <ol>
             <li><span>01</span><strong>How the 12-week schedule works</strong></li>
             <li><span>02</span><strong>What students practice during class</strong></li>
-            <li><span>03</span><strong>What equipment is purchased later</strong></li>
+            <li><span>03</span><strong>Which required supplies are purchased through the school</strong></li>
             <li><span>04</span><strong>How progress and completion are evaluated</strong></li>
             <li><span>05</span><strong>What the program does and does not qualify you to do</strong></li>
           </ol>
