@@ -22,7 +22,7 @@ const policies = [
   {
     title: "Equipment",
     copy:
-      "Students are responsible for approved personal equipment and consumables. Unsafe or questionable equipment may not be used in class.",
+      "All required equipment, supplies, inks, cartridges, practice materials, and consumables used in the program must be purchased through Ink Tattoo School. Outside supplies or equipment are not permitted in class unless the school gives written authorization for a specific exception.",
   },
   {
     title: "Homework & practice",
