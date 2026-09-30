@@ -46,6 +46,31 @@ const weeks = [
   "Professional Development & Final Testing",
 ];
 
+const reasons = [
+  ["25+ Years", "Learn from Megg Murray’s decades of real tattoo-shop experience."],
+  ["Small Classes", "More room for questions, observation, repetition and direct feedback."],
+  ["Real Shop", "Training is built around professional habits, equipment knowledge and shop expectations."],
+  ["Art + Safety", "Technique matters, but so do drawing, sanitation, setup and disciplined process."],
+];
+
+const outcomes = [
+  "A stronger tattoo-focused art portfolio",
+  "Working knowledge of machines, needles, cartridges and setup",
+  "Foundational control in linework, shading and color",
+  "Sanitation and cross-contamination prevention habits",
+  "Experience completing structured practice projects",
+  "A clearer understanding of professional shop expectations",
+];
+
+const journey = [
+  ["01", "Apply", "Tell the school about your goals and what draws you to tattooing."],
+  ["02", "Learn", "Start with sanitation, drawing, design, equipment and core fundamentals."],
+  ["03", "Practice", "Build control through repeated stencil, line, shading and color exercises."],
+  ["04", "Build", "Turn guided practice into stronger projects and portfolio-ready work."],
+  ["05", "Finish", "Complete final projects, testing and professional-development work."],
+  ["06", "Next", "Leave with a clearer picture of the next step in your tattoo career."],
+];
+
 export default function Home() {
   return (
     <main id="main-content">
@@ -107,6 +132,71 @@ export default function Home() {
             <p>{pillar.copy}</p>
           </article>
         ))}
+      </section>
+
+      <section className="why-ink">
+        <div className="shell">
+          <div className="why-ink-heading">
+            <div>
+              <p className="eyebrow">Why Ink Tattoo School</p>
+              <h2>Built for people who want more than a quick introduction.</h2>
+            </div>
+            <p>
+              The program is structured to connect art, safety, equipment and technique instead of
+              treating them like separate subjects. Every stage is meant to support the next.
+            </p>
+          </div>
+          <div className="why-ink-grid">
+            {reasons.map(([title, copy], index) => (
+              <article key={title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="student-journey">
+        <div className="shell student-journey-grid">
+          <div className="student-journey-intro">
+            <p className="eyebrow">Your path through the program</p>
+            <h2>From first conversation to final project.</h2>
+            <p>
+              The goal is not to rush students into tattooing. It is to build a sequence of skills,
+              habits and decisions that make the next step more informed.
+            </p>
+          </div>
+          <ol className="journey-list">
+            {journey.map(([number, title, copy]) => (
+              <li key={number}>
+                <span>{number}</span>
+                <div>
+                  <strong>{title}</strong>
+                  <p>{copy}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="outcomes-section">
+        <div className="shell outcomes-grid">
+          <div>
+            <p className="eyebrow">What you leave with</p>
+            <h2>Not a shortcut. A stronger foundation.</h2>
+          </div>
+          <div className="outcome-list">
+            {outcomes.map((outcome, index) => (
+              <div key={outcome}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{outcome}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="founder-teaser">
@@ -201,11 +291,11 @@ export default function Home() {
       <section className="cta" id="apply">
         <div className="shell cta-inner">
           <p className="eyebrow">Admissions</p>
-          <h2>Your first step isn&apos;t buying a machine.</h2>
-          <p>Start with an application, learn about the program and talk with the school about your goals.</p>
+          <h2>Think tattooing might be your career?</h2>
+          <p>See the school, ask the hard questions and learn exactly what the program includes before you commit.</p>
           <div className="hero-actions">
-            <a className="button button-light" href="/admissions#application">Start an inquiry</a>
-            <a className="text-link text-link-light" href="/admissions">Admissions details <span>↘</span></a>
+            <a className="button button-light" href="/contact">Schedule a visit</a>
+            <a className="text-link text-link-light" href="/admissions#application">Apply now <span>↘</span></a>
           </div>
         </div>
       </section>
